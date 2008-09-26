@@ -1,0 +1,312 @@
+/*
+Theme Name: mike arthur dot co dot you kay
+Theme URI: http://mikearthur.co.uk/
+Description: The theme for Mike Arthur's homepage
+Version: 1.1
+Author: Mike Arthur
+Author URI: http://mikearthur.co.uk/
+Copyright: Mike Arthur 2008
+Email:  mike@mikearthur.co.uk
+
+This website complies with all the latest web standards from W3C.
+Permission is granted to copy, distribute and/or modify this document under
+the terms of the GNU Free Documentation License, version 1.1 or any later
+version published by the Free Software Foundation at
+http://www.gnu.org/licenses/fdl.html
+*/
+
+html {
+	background: black;
+	color: white;
+}
+
+body {
+	font : 0.8em sans-serif;
+	color : white;
+	background : black;
+	margin : 2% 0;
+	text-align : left;
+}
+
+#page {
+	background: white;
+	color: black;
+}
+
+#title {
+	width: 100%;
+	background : url(images/header.jpg) repeat-x top left;
+	padding: 0;
+	height: 100px;
+	margin: 0;
+	text-align: center;
+}
+
+#iewarning {
+	width: 90%;
+	font: 2em sans-serif;
+	text-align: center;
+	border: solid red 1px;
+	background: black;
+	color: red;
+	margin: 0 5% 10px 5%;
+	padding: 2px 0 2px 0;
+}
+
+#iewarning h1{
+	background: inherit;
+	color: red;
+}
+
+#navbar {
+	width : 90%;
+	text-align: center;
+	border: solid black 1px;
+	background: #EEEEEE;
+	color: black;
+	margin: 0 5% 10px 5%;
+	padding: 2px 0 2px 0;
+}
+
+#pagecontent {
+	margin: 10px 5% 0 5%;
+	padding: 0 2% 10px 2%;
+	width: 86%;
+	border: solid gray 1px;
+	overflow: hidden;
+	background: #FCFCFC;
+	color: inherit;
+}
+
+#footericons {
+	clear : both;
+	width : 90%;
+	text-align: center;
+	border: solid black 1px;
+	background: #F3F3F3;
+	color: inherit;
+	margin: 20px 5% 0 5%;
+	padding: 4px 0 1px 0;
+}
+
+#fadeout {
+	clear : both;
+	background: url(images/gradient.png) repeat-x bottom center;
+	padding: 0 0 50px 0;
+}
+
+#copyright {
+	clear : both;
+	background: black;
+	color: gray;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	text-shadow: 0.1em 0.1em 0.1em gray;
+	font-size: 2.5em;
+	color: white;
+	background-color: inherit;
+	padding: 0;
+	margin: 0;
+}
+
+#description {
+	font-size: 1.8em;
+	font-family: serif;
+	font-weight: bold;
+	text-shadow: 0.1em 0.1em 0.1em black;
+	background-color: inherit;
+	color: gray;
+}
+
+h2 {
+	text-shadow: 0.1em 0.1em 0.1em gray;
+	font-size: 1.5em;
+}
+
+h3 {
+	text-shadow: 0.1em 0.1em 0.1em gray;
+	font-size: 1.2em;
+	margin: 10px 0 5px 0;
+}
+
+.postdate {
+	text-shadow: 0.1em 0.1em 0.1em gray;
+	font-size: 1.2em;
+	margin: 10px 0 5px 0;
+}
+
+#navbar a {
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 2px 1.5% 2px 1.5%;
+	margin: 0;
+	border-left: #EEEEEE solid;
+	border-right: #EEEEEE solid;
+}
+
+#navbar a:hover {
+	border-left: #A3A3A3 solid;
+	border-right: #A3A3A3 solid;
+}
+
+.footericon {
+	padding: 0 5% 0 5%;
+	border: none;
+	text-decoration: none;
+}
+
+img#wpstats {
+        width:0px;
+        height:0px;
+        padding:0px;
+        border:none;
+        overflow:hidden
+}
+
+.floatright {
+	margin: 5px;
+	padding: 10px;
+	border: dotted black 1px;
+	background: #F3F3F3;
+	color: inherit;
+	float : right;
+	clear : right;
+}
+
+#blogcontent {
+	margin: 0 5% 0 5%;
+	padding: 0;
+	width: 90%;
+}
+
+#posts, #sidebar {
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+
+#posts {
+	width: 76%;
+	padding: 0;
+	margin: 0;
+}
+
+#sidebar {
+	float: right;
+	border: solid gray 1px;
+	background: #EEEEEE;
+	color: inherit;
+	width: 20%;
+	text-align : left;
+	padding: 0 1% 5px 1%;
+        margin: 10px 0 10px 0;
+	overflow: hidden;
+}
+
+#sidebar li, #sidebar ul {
+	padding: 0;
+	list-style: none;
+	margin: 0;
+}
+
+
+#sidebar img {
+        text-decoration: none;
+        border: none;
+}
+
+#twitter_update_list li {
+	margin: 5px 0;
+}
+
+.post {
+	border: solid gray 1px;
+	overflow: hidden;
+	background: #FCFCFC;
+	color: inherit;
+	padding: 0 2% 5px 2%;
+	margin: 10px 0 10px 0;
+}
+
+#comments {
+	border: solid gray 1px;
+	overflow: hidden;
+	background: #EEEEEE;
+	color: inherit;
+	padding: 0 2% 5px 2%;
+	margin: 0 0 10px 0;
+}
+
+.comment {
+	border: solid gray 1px;
+	background: white;
+	color: inherit;
+	padding: 0 2% 5px 2%;
+	margin: 0 0 10px 0;
+}
+
+.comment-author {
+	border: solid white 1px;
+	background: gray;
+	color: white;
+	padding: 0 2% 5px 2%;
+	margin: 0 0 10px 0;
+}
+
+#comments .avatar {
+	float: right;
+	clear: right;
+	margin: 5px;
+}
+
+.comment .avatar {
+	border: solid gray 1px;
+}
+
+.comment-author .avatar {	
+	border: solid white 1px;
+}
+
+#commentinput {
+	width: 100%;
+}
+
+#avatar {
+	border: solid gray 1px;
+}
+
+.centred {
+	text-align: center;
+}
+
+table, th, td {
+	border: none;
+}
+
+.datatable {
+	border: solid gray 1px;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.datatable th, .datatable td {
+	border: inset gray 1px;
+	padding: 0px 3px;
+}
+
+.rightalign {
+	text-align: right;
+}
+
+.doubleborder {
+	border: solid gray 1px;
+}
+
+.noborder {
+	text-decoration: none;
+	border: none;
+}
