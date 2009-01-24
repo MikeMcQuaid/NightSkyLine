@@ -49,15 +49,15 @@ if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) :
 	<ul>
 
 	<li><a href="feed/">
-	<img class="noborder" src="<?php bloginfo('template_directory'); ?>/images/badges/rss.gif" alt="RSS feed" />
+	<img src="<?php bloginfo('template_directory'); ?>/images/badges/rss.gif" alt="RSS feed" />
 	</a></li>
 
 	<li><a href="http://wordpress.org" rel="external">
-	<img class="noborder" src="<?php bloginfo('template_directory'); ?>/images/badges/wordpress.gif" alt="Powered by Wordpress" />
+	<img src="<?php bloginfo('template_directory'); ?>/images/badges/wordpress.gif" alt="Powered by Wordpress" />
 	</a></li>
 
 	<li><a href="http://kernel.org" rel="external">
-	<img class="noborder" src="<?php bloginfo('template_directory'); ?>/images/badges/linux.gif" alt="Powered by Linux" />
+	<img src="<?php bloginfo('template_directory'); ?>/images/badges/linux.gif" alt="Powered by Linux" />
 	</a></li>
 
 	</ul>

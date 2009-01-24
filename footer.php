@@ -5,17 +5,22 @@
 
 <div id="footericons">
 <a class="footericon" href="http://validator.w3.org/check/referer?verbose=1" rel="external">
-<img class="noborder" src="<?php bloginfo('template_directory'); ?>/images/w3cxhtml.gif" alt="Valid XHTML 1.0 Strict" />
+<img src="<?php bloginfo('template_directory'); ?>/images/w3cxhtml.gif" alt="Valid XHTML 1.0 Strict" />
 </a>
 <a class="footericon" href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" rel="external">
-<img class="noborder" src="<?php bloginfo('template_directory'); ?>/images/w3ccss.gif" alt="Valid CSS 3" />
+<img src="<?php bloginfo('template_directory'); ?>/images/w3ccss.gif" alt="Valid CSS 3" />
 </a>
 </div>
 
 <div id="fadeout"></div>
 
-<div id="copyright">Copyright <a href="mailto:mike@mikearthur.co.uk">Mike Arthur</a> 2008. This page is licensed under the <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation License</a>. Ipswich header image courtesy of <a href="http://www.flickr.com/photos/nikost/" rel="external">Nikos Tsarmpopoulos</a>.</div>
+<div id="copyright">This site &copy; <a href="mailto:mike@mikearthur.co.uk">Mike Arthur</a> 2009
+<br/>
+London header image &copy; <a href="http://www.flickr.com/photos/peter_schauer/" rel="external">Peter Schauer</a>.
+<br/>
+All posts and pages licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-Non-Commercial-Share Alike</a>
 <?php wp_footer(); ?>
+</div>
 </div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head profile="http://gmpg.org/xfn/11">
     <?php if (have_posts()) the_post(); rewind_posts(); ?>
     <title><?php wp_title("");if(wp_title("", false)){echo ' - ';}bloginfo('name');?></title>
@@ -13,8 +13,8 @@
           href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
     <link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.gif" type="image/gif"/>
     <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>" href="feed/" />
-    <link rel="openid.server" href="http://www.myopenid.com/server">
-    <link rel="openid.delegate" href="http://mikearthur.myopenid.com/">
+    <link rel="openid.server" href="http://www.myopenid.com/server" />
+    <link rel="openid.delegate" href="http://mikearthur.myopenid.com/" />
     <?php wp_head(); ?>
   </head>
 <body>
@@ -26,11 +26,15 @@
 
 <div id="navbar">
   <a href="/">blog</a>
-  <a href="/work/">work</a>
-  <a href="/music/">music</a>
-  <a href="/this-server/">this server</a>
-  <a href="http://www.flickr.com/photos/mikearthur/sets/">photos</a>
-  <a href="/contact/">contact</a>
+<?php
+  $pages = get_pages('sort_column=menu_order');
+  foreach ($pages as $page) {
+    $link = '  <a href="'.get_page_link($page->ID).'">';
+    $link .= strtolower($page->post_title);
+    $link .= "</a>\n";
+    echo $link;
+  }
+?>
 </div>
 
 <div id="pagecontent">

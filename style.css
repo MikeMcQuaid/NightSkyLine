@@ -2,17 +2,13 @@
 Theme Name: mike arthur dot co dot you kay
 Theme URI: http://mikearthur.co.uk/
 Description: The theme for Mike Arthur's homepage
-Version: 1.1
+Version: 1.2
 Author: Mike Arthur
 Author URI: http://mikearthur.co.uk/
-Copyright: Mike Arthur 2008
+Copyright: Mike Arthur 2009
 Email:  mike@mikearthur.co.uk
 
 This website complies with all the latest web standards from W3C.
-Permission is granted to copy, distribute and/or modify this document under
-the terms of the GNU Free Documentation License, version 1.1 or any later
-version published by the Free Software Foundation at
-http://www.gnu.org/licenses/fdl.html
 */
 
 html {
@@ -115,11 +111,13 @@ h1 {
 
 #description {
 	font-size: 1.8em;
-	font-family: serif;
+	font-family: monospace;
 	font-weight: bold;
 	text-shadow: 0.1em 0.1em 0.1em black;
 	background-color: inherit;
-	color: gray;
+	color: lightgrey;
+	padding: 1px;
+	margin: 0;
 }
 
 h2 {
@@ -214,7 +212,7 @@ img#wpstats {
 }
 
 
-#sidebar img {
+img {
         text-decoration: none;
         border: none;
 }
@@ -306,7 +304,13 @@ table, th, td {
 	border: solid gray 1px;
 }
 
-.noborder {
-	text-decoration: none;
-	border: none;
+#flickr_js_photos img {
+	border: solid gray 1px;
+	padding: 1px;
+	margin: 1px;
+}
+
+#flickr_js_photos div {
+	float: left;
+	clear: none;
 }
