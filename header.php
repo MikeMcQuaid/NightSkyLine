@@ -29,8 +29,7 @@
   <a href="/work/">work</a>
   <a href="/music/">music</a>
   <a href="/this-server/">this server</a>
-  <a href="/services/">services</a>
-  <a href="http://www.flickr.com/photos/mikearthur/sets/">pictures</a>
+  <a href="http://www.flickr.com/photos/mikearthur/sets/">photos</a>
   <a href="/contact/">contact</a>
 </div>
 
