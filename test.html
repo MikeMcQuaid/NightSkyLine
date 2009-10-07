@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head profile="http://gmpg.org/xfn/11">
+        <title>mike arthur dot co dot you kay</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" title="Default" type="text/css"
+          href="style.css" media="screen" />
+    <link rel="icon" href="images/favicon.gif" type="image/gif"/>
+  </head>
+<body>
+<div id="page">
+<div id="title">
+  <h1>mike arthur dot co dot you kay</h1>
+  <p id="description">the internet is leaking</p>
+</div>
+
+<div id="navbar">
+  <a href="/">blog</a>
+  <a href="http://mikearthur.co.uk/work/">work</a>
+  <a href="http://mikearthur.co.uk/music/">music</a>
+  <a href="http://mikearthur.co.uk/server/">server</a>
+  <a href="http://mikearthur.co.uk/photos/">photos</a>
+  <a href="http://mikearthur.co.uk/contact/">contact</a>
+</div>
+
+<div id="pagecontent">
+
+<div id="posts">
+
+<div class="post" id="post-346">
+	<h2 class="storytitle"><a href="http://mikearthur.co.uk/2009/07/yet-another-kdab-employee/"
+rel="bookmark" title="Yet Another KDAB Employee">Yet Another KDAB Employee</a></h2>
+	<p class="postdate">Friday 24th July, 2009 @ 09:52</p>
+		<p>Seeing all the <a href="http://steveire.wordpress.com/2009/07/18/the-buck-starts-here/">other</a> <a href="http://pinheiro-kde.blogspot.com/2009/07/kde-people.html">posts</a> <a href="http://blog.guillermoamaral.com/2009/07/23/news-flash/">recently</a> about people working at KDAB I thought I&#8217;d announce that my &#8220;secret dream employer&#8221; I <a href="http://mikearthur.co.uk/2009/06/looking-to-the-future/">previously mentioned I was freelancing for</a> was, in fact, <a href="http://www.kdab.com/">KDAB</a> (the <a href="http://www.kdab.com/">Qt consultants</a>) and they decided to take me on as a permanent employee.</p>
+<p>It&#8217;s an <strong>awesome</strong> place to work as I get to work from home which means playing my current favourite <a href="http://www.ayreon.com/">pretentious but awesome progressive rock</a> nice and loud while I work without having to worry about irritating anyone else. It&#8217;s been awesome hanging out with the guys at GCDS and on my <a href="http://www.dopplr.com/traveller/mikearthur">various expeditions</a> (in their head office in Sweden at the moment). They are all <strong>really cool people</strong> who can have a decent laugh while getting lots of cool work done. It&#8217;s also been great for me to now have a job with so many amazing software engineers who I can learn from.</p>
+<p>My only problem is that they seem like they are hiring everyone now. <strong>I thought I was special?</strong> Now I just feel like just another notch on the <del>bedpost</del> organisational chart! For each awesome person who gets hired I feel like I deserve to be here even less!</p>
+<p>It&#8217;s also nice because it&#8217;s got me doing way more KDE stuff that I was previously. I&#8217;ve been actually getting involved in the KDE Mac project now and hopefully will get to push KDE forward through some (unannounced) work stuff too.</p>
+<p>In short, KDAB rocks!</p>
+		   <p><strong>Posted in <a href="http://mikearthur.co.uk/category/my-life/" title="View all posts in My Life" rel="category tag">My Life</a>,  <a href="http://mikearthur.co.uk/category/software-development/" title="View all posts in Software Development" rel="category tag">Software Development</a></strong></p>
+           <p><strong>
+           <a href="http://mikearthur.co.uk/2009/07/yet-another-kdab-employee/#comments" title="Comment on Yet Another KDAB Employee">7 Comments &#187;</a>           </strong></p>
+</div>
+
+
+<div class="post" id="post-342">
+	<h2 class="storytitle"><a href="http://mikearthur.co.uk/2009/07/macbook-kde-development/"
+rel="bookmark" title="MacBook KDE Development">MacBook KDE Development</a></h2>
+	<p class="postdate">Monday 20th July, 2009 @ 20:52</p>
+		<p>Recently while looking for a replacement for my trusty Dell laptop I ended up being sucked into buying a <a href="http://www.apple.com/uk/macbook/">piece of white shiny plastic that apparently doubles as a computer</a>.</p>
+<p>I tried running Linux on it but due to some <a href="http://bugzilla.kernel.org/show_bug.cgi?id=13170">still unresolved issue</a> it&#8217;s not really usable as a main operating system yet on this laptop so I&#8217;ve been forcing myself to use OSX for a while and trying to learn some lessons from it.</p>
+<p>As my first main contribution to the KDE Mac project I&#8217;ve been working at getting the packages easily buildable and distributable without MacPorts/Fink by using <a href="http://www.itk.org/Wiki/CMake:Packaging_With_CPack">CPack</a> (a cross-platform packaging tool that comes with CMake). This is the type of project that will probably be mostly committed in a oner into KDE Libs (post-review) and hopefully then available to basically any KDE project with a little configuration. I&#8217;m planning on starting with getting some basic packages without dependencies first (e.g. without KDELibs or DBus bundled) and then work up to an application bundle that contains all library and executable dependencies. If you&#8217;re interested what the result might look like then take a look at the <a href="http://www.mendeley.com/download-mendeley-desktop">Mendeley Desktop OSX package</a>, built entirely using CPack that I produces while working at Mendeley.</p>
+<p>Another thing I&#8217;ve found while building KDE for OSX is the need to build universal packages for all the KDE dependencies. This omits Fink unfortunately so I&#8217;ve ended up using MacPorts. Due to <a href="http://trac.macports.org/wiki/FAQ#syslibs">a decision I disagree with</a> I&#8217;ve contributed to Harald Fernengel&#8217;s project for adding dummy versions of MacPorts packages that are already available on OSX Leopard. <a href="http://gitorious.org/macports-dummies/macports-dummies">You can find this on gitorious</a>.</p>
+<p>For anyone interested, the current minimal dependencies for various packages in trunk are listed below:<br />
+<strong>kdelibs</strong>: pcre++, shared-mime-info, jpeg, giflib, libpng, dbus<br />
+<strong>akonadi</strong>: shared-mime-info, boost<br />
+<strong>kdepimlibs</strong>: gpgme, libical<br />
+<strong>kdepim</strong>: <em>none</em></p>
+<p>Once I&#8217;ve got a bit further I&#8217;ll get all this stuff on TechBase. Anyone interested in helping out or lending an opinion feel free to leave a comment.</p>
+		   <p><strong>Posted in <a href="http://mikearthur.co.uk/category/software-development/" title="View all posts in Software Development" rel="category tag">Software Development</a></strong></p>
+           <p><strong>
+           <a href="http://mikearthur.co.uk/2009/07/macbook-kde-development/#comments" title="Comment on MacBook KDE Development">5 Comments &#187;</a>           </strong></p>
+</div>
+
+<a href="http://mikearthur.co.uk/page/2/" >Next Page &raquo;</a>
+</div>
+
+<div id="sidebar">
+<ul>
+
+<li>
+	<h2>Author</h2>
+	<img alt='' src='http://www.gravatar.com/avatar/9bab8e092570baf4e05b376260b29ed2?s=100&amp;d=identicon&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />	<p>My name is Mike Arthur. I'm a Christian, software engineer, FOSS developer and bass guitarist.</p>
+</li>
+
+<li>
+	<h2>Twitter Updates</h2>
+	<ul id="twitter_update_list"><li>Loading...</li></ul>
+	<p><a href="http://twitter.com/mikearthur" rel="me external">Follow me on Twitter</a></p>
+</li>
+
+<li>
+	<h2>Categories</h2>
+	<ul>
+		<li class="cat-item cat-item-3"><a href="http://mikearthur.co.uk/category/christianity/" title="View all posts filed under Christianity">Christianity</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://mikearthur.co.uk/category/cinema/" title="View all posts filed under Cinema">Cinema</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="http://mikearthur.co.uk/category/computer-games/" title="View all posts filed under Computer Games">Computer Games</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://mikearthur.co.uk/category/music/" title="View all posts filed under Music">Music</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://mikearthur.co.uk/category/my-life/" title="View all posts filed under My Life">My Life</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://mikearthur.co.uk/category/politics/" title="View all posts filed under Politics">Politics</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://mikearthur.co.uk/category/random/" title="View all posts filed under Random">Random</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="http://mikearthur.co.uk/category/software-development/" title="View all posts filed under Software Development">Software Development</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://mikearthur.co.uk/category/uncategorized/" title="View all posts filed under Uncategorized">Uncategorized</a>
+</li>
+	</ul>
+</li>
+
+<li>
+	<h2>Search</h2>
+	<form id="searchform" method="get" action="/index.php">
+		<div>
+		<input type="text" name="s" id="s" size="12" />
+		<input type="submit" value="?" />
+		</div>
+	</form>
+</li>
+
+<li>
+	<h2>Archives</h2>
+	<ul>
+		<li><a href='http://mikearthur.co.uk/2009/07/' title='July 2009'>July 2009</a>&nbsp;(2)</li>
+	<li><a href='http://mikearthur.co.uk/2009/06/' title='June 2009'>June 2009</a>&nbsp;(1)</li>
+	<li><a href='http://mikearthur.co.uk/2009/03/' title='March 2009'>March 2009</a>&nbsp;(1)</li>
+	<li><a href='http://mikearthur.co.uk/2009/02/' title='February 2009'>February 2009</a>&nbsp;(4)</li>
+	<li><a href='http://mikearthur.co.uk/2008/12/' title='December 2008'>December 2008</a>&nbsp;(1)</li>
+	<li><a href='http://mikearthur.co.uk/2008/09/' title='September 2008'>September 2008</a>&nbsp;(6)</li>
+	</ul>
+</li>
+
+  <li id="linkcat-2" class="linkcat"><h2>Blogs I Read</h2>
+	<ul>
+<li><a href="http://www.andrewweir.co.uk/">Andrew Weir</a></li>
+<li><a href="http://benjam.tiddlyspot.com">BenJam</a></li>
+<li><a href="http://www.codinghorror.com/blog/">Coding Horror</a></li>
+<li><a href="http://confessionsofadoubtingthomas.blogspot.com/">Confessions of a Doubting Thomas</a></li>
+<li><a href="http://blogs.law.harvard.edu/doc/">Doc Searls</a></li>
+<li><a href="http://www.dunc.info/">Duncan MacLaren</a></li>
+<li><a href="http://blog.garethjmsaunders.co.uk/">Gareth Saunders</a></li>
+<li><a href="http://joelonsoftware.com">Joel on Software</a></li>
+<li><a href="http://rooc.offtopicproductions.com/blog/">Jonas Wæver</a></li>
+<li><a href="http://makeitbetter.wordpress.com">Make It Better</a></li>
+<li><a href="http://www.markshuttleworth.com/">Mark Shuttleworth</a></li>
+<li><a href="http://nakedgenerations.blogspot.com/" rel="friend met" title="Blog about better working with the younger generations in business.">Naked Generations</a></li>
+<li><a href="http://planetkde.org">Planet KDE</a></li>
+<li><a href="http://www.presentationzen.com/">Presentation Zen</a></li>
+<li><a href="http://www.rockpapershotgun.com">Rock, Paper, Shotgun</a></li>
+<li><a href="http://www.aboutlife.com/steveinafrica">Steve Bennett</a></li>
+<li><a href="http://www.kdedevelopers.org/blog/4832">Thorsten Stærk</a></li>
+<li><a href="http://junctionpoint.wordpress.com/">Warren Spector</a></li>
+
+	</ul>
+</li>
+  <li id="linkcat-14" class="linkcat"><h2>My Profiles</h2>
+	<ul>
+<li><a href="http://www.amazon.co.uk/gp/redirect.html?ie=UTF8&#38;location=http%3A%2F%2Fwww.amazon.co.uk%2Fgp%2Fregistry%2Fwishlist%3Fie%3DUTF8%26%252AVersion%252A%3D1%26%252Aentries%252A%3D0&#38;tag=mikearthudotc-21&#38;linkCode=ur2&#38;camp=1634&#38;creative=19450" rel="me" title="My Amazon.co.uk wishlist"><img src="http://mikearthur.co.uk/wp-content/uploads/2008/03/amazon.gif"  alt="Amazon.co.uk"  title="My Amazon.co.uk wishlist" /></a></li>
+<li><a href="http://cia.vc/stats/author/mikearthur" rel="me" title="My commits to open source software projects"><img src="http://mikearthur.co.uk/wp-content/uploads/2008/03/ciavc.gif"  alt="CIA.vc"  title="My commits to open source software projects" /></a></li>
+<li><a href="http://www.facebook.com/mikekarthur" rel="me" title="My Facebook profile"><img src="http://mikearthur.co.uk/wp-content/uploads/2008/03/facebook.gif"  alt="Facebook"  title="My Facebook profile" /></a></li>
+<li><a href="http://www.flickr.com/photos/mikearthur/" rel="me" title="My Flickr photos"><img src="http://mikearthur.co.uk/wp-content/uploads/2008/03/flickr.gif"  alt="Flickr"  title="My Flickr photos" /></a></li>
+<li><a href="http://friendfeed.com/mikearthur" rel="me" title="My FriendFeed"><img src="http://mikearthur.co.uk/wp-content/uploads/2008/12/friendfeed.gif"  alt="FriendFeed"  title="My FriendFeed" /></a></li>
+<li><a href="http://www.last.fm/user/mikearthur/" rel="me" title="My Last.fm profile"><img src="http://mikearthur.co.uk/wp-content/uploads/2008/03/lastfm.gif"  alt="Last.fm"  title="My Last.fm profile" /></a></li>
+<li><a href="http://www.linkedin.com/in/mikekarthur" rel="me" title="My LinkedIn profile"><img src="http://mikearthur.co.uk/wp-content/uploads/2008/09/linkedin.gif"  alt="LinkedIn"  title="My LinkedIn profile" /></a></li>
+<li><a href="http://www.ohloh.net/accounts/15004" rel="me" title="My Ohloh profile"><img src="http://mikearthur.co.uk/wp-content/uploads/2008/03/ohloh.gif"  alt="Ohloh"  title="My Ohloh profile" /></a></li>
+<li><a href="http://twitter.com/mikearthur/" rel="me" title="My Twitter tweets"><img src="http://mikearthur.co.uk/wp-content/uploads/2008/04/twitter.gif"  alt="Twitter"  title="My Twitter tweets" /></a></li>
+
+	</ul>
+</li>
+  <li id="linkcat-8" class="linkcat"><h2>Politics</h2>
+	<ul>
+<li><a href="http://www.libdems.org.uk/" title="The UK Liberal Democrats&#8217; party homepage.">Liberal Democrats</a></li>
+<li><a href="http://petitions.libdems.org.uk/buttons/nick-clegg.jpg" title="The homepage of the UK&#8217;s Liberal Democrats&#8217; leader.">Nick Clegg</a></li>
+<li><a href="http://www.libdems.org.uk/noidcards/" title="The UK&#8217;s Liberal Democrats&#8217; no to ID cards campaign.">No ID Cards</a></li>
+
+	</ul>
+</li>
+
+<li>
+	<h2>Meta</h2>
+		<ul>
+
+	<li><a href="feed/">
+	<img src="http://mikearthur.co.uk/wp-content/themes/mikearthur/images/badges/rss.gif" alt="RSS feed" />
+	</a></li>
+
+	<li><a href="http://wordpress.org" rel="external">
+	<img src="http://mikearthur.co.uk/wp-content/themes/mikearthur/images/badges/wordpress.gif" alt="Powered by Wordpress" />
+	</a></li>
+
+	<li><a href="http://kernel.org" rel="external">
+	<img src="http://mikearthur.co.uk/wp-content/themes/mikearthur/images/badges/linux.gif" alt="Powered by Linux" />
+	</a></li>
+
+	</ul>
+</li>
+
+</ul>
+</div>
+
+</div>
+
+<div id="footericons">
+<a class="footericon" href="http://validator.w3.org/check/referer?verbose=1" rel="external">
+<img src="http://mikearthur.co.uk/wp-content/themes/mikearthur/images/w3cxhtml.gif" alt="Valid XHTML 1.0 Strict" />
+</a>
+<a class="footericon" href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" rel="external">
+<img src="http://mikearthur.co.uk/wp-content/themes/mikearthur/images/w3ccss.gif" alt="Valid CSS 3" />
+</a>
+</div>
+
+<div id="fadeout"></div>
+
+<div id="copyright">This site &copy; <a href="mailto:mike@mikearthur.co.uk">Mike Arthur</a> 2009
+<br/>
+London header image &copy; <a href="http://www.flickr.com/photos/peter_schauer/" rel="external">Peter Schauer</a>.
+<br/>
+All posts and pages licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-Non-Commercial-Share Alike</a>
+</div>
+</div>
+</body>
+</html>
