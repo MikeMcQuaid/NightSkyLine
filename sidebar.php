@@ -60,6 +60,10 @@ if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) :
 	<img src="<?php bloginfo('template_directory'); ?>/images/badges/linux.gif" alt="Powered by Linux" />
 	</a></li>
 
+	<li><a href="http://validator.w3.org/check/referer?verbose=1" rel="external">
+	<img src="<?php bloginfo('template_directory'); ?>/images/badges/w3cxhtml.gif" alt="Valid XHTML 1.0 Strict" />
+	</a></li>
+
 	</ul>
 </li>
 

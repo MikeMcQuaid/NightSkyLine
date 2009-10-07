@@ -1,14 +1,5 @@
 </div>
 
-<div id="footericons">
-<a class="footericon" href="http://validator.w3.org/check/referer?verbose=1" rel="external">
-<img src="<?php bloginfo('template_directory'); ?>/images/w3cxhtml.gif" alt="Valid XHTML 1.0 Strict" />
-</a>
-<a class="footericon" href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" rel="external">
-<img src="<?php bloginfo('template_directory'); ?>/images/w3ccss.gif" alt="Valid CSS 3" />
-</a>
-</div>
-
 <div id="fadeout"></div>
 
 <div id="copyright">This site &copy; <a href="mailto:mike@mikearthur.co.uk">Mike Arthur</a> 2009
