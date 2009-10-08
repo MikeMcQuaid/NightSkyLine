@@ -157,9 +157,10 @@ img#wpstats {
 	overflow: hidden;*/
 }
 
-#sidebar div {
+.footerbar {
 	float: left;
-	width: 32%;
+	width: 30%;
+	padding: 0 1%;
 }
 
 #posts {
@@ -196,7 +197,7 @@ img {
 }
 
 #twitter_update_list li {
-	margin: 5px 0;
+	margin: 0;
 }
 
 .post {
