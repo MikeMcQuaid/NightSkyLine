@@ -1,5 +1,4 @@
 <div id="sidebar">
-<?php
 <div>
 	<h3>Author</h3>
 	<?php echo get_avatar(get_the_author_email(), 100) ?>
