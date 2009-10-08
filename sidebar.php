@@ -1,50 +1,43 @@
 <div id="sidebar">
-<ul>
 <?php
-//If we are using a dynamic sidebar use that instead
-if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) :
-?>
-
-<li>
-	<h2>Author</h2>
+<div>
+	<h3>Author</h3>
 	<?php echo get_avatar(get_the_author_email(), 100) ?>
 	<p><?php the_author_description(); ?></p>
-</li>
+</div>
 
-<li>
-	<h2>Twitter Updates</h2>
+<div>
+	<h3>Twitter Updates</h3>
 	<ul id="twitter_update_list"><li>Loading...</li></ul>
 	<p><a href="http://twitter.com/mikearthur" rel="me external">Follow me on Twitter</a></p>
-</li>
+</div>
 
-<li>
-	<h2>Categories</h2>
+<div>
+	<h3>Categories</h3>
 	<ul>
 	<?php wp_list_cats(); ?>
 	</ul>
-</li>
 
-<li>
-	<h2>Search</h2>
+	<h3>Search</h3>
 	<form id="searchform" method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 		<div>
 		<input type="text" name="s" id="s" size="12" />
 		<input type="submit" value="<?php _e('?'); ?>" />
 		</div>
 	</form>
-</li>
 
-<li>
-	<h2>Archives</h2>
+	<h3>Archives</h3>
 	<ul>
 	<?php wp_get_archives('type=monthly&limit=6&show_post_count=TRUE'); ?>
 	</ul>
-</li>
+</div>
 
+<div>
 <?php get_links_list(); ?>
+</div>
 
-<li>
-	<h2>Meta</h2>
+<div>
+	<h3>Meta</h3>
 	<?php wp_meta(); ?>
 	<ul>
 
@@ -65,8 +58,7 @@ if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) :
 	</a></li>
 
 	</ul>
-</li>
+</div>
 
 <?php endif; ?>
-</ul>
 </div>
