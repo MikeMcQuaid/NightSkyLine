@@ -18,11 +18,11 @@ html {
 }
 
 body {
-	font : 0.8em sans-serif;
-	color : white;
-	background : black;
-	margin : 2% 0;
-	text-align : left;
+	font: 0.8em sans-serif;
+	color: white;
+	background: black;
+	margin: 2% 0;
+	text-align: left;
 }
 
 #page {
@@ -41,7 +41,7 @@ body {
 
 h1 {
 	text-shadow: 0.1em 0.1em 0.1em gray;
-	font-size: 2.5em;
+	font: bold 2.5em sans-serif;
 	color: white;
 	background-color: inherit;
 	padding: 0;
@@ -49,9 +49,7 @@ h1 {
 }
 
 #description {
-	font-size: 1.8em;
-	font-family: monospace;
-	font-weight: bold;
+	font: bold 1.8em monospace;
 	text-shadow: 0.1em 0.1em 0.1em black;
 	background-color: inherit;
 	color: #D3D3D3;
@@ -73,8 +71,7 @@ h1 {
 }
 
 #navbar a {
-	font-size: 1.2em;
-	font-weight: bold;
+	font: bold 1.2em sans-serif;
 	padding: 0.15em 1.5%;
 	margin: 0;
 	border-left: solid #EEEEEE 3px;
@@ -89,7 +86,7 @@ h1 {
 #posts {
 	width: 90%;
 	padding: 0;
-	margin: 0 5%;
+	margin: 0 auto;
 }
 
 .post {
@@ -106,7 +103,7 @@ h1 {
 
 h2 {
 	text-shadow: 0.1em 0.1em 0.1em gray;
-	font-size: 1.5em;
+	font: bold 1.5em sans-serif;
 }
 
 .postdate {
@@ -164,19 +161,19 @@ h3 {
 .authorbar {
 	float: left;
 	width: 40%;
-	padding: 0 1%;
+	padding: 0 1em;
 }
 
 .linkbar {
 	float: left;
 	width: 25%;
-	padding: 0 1%;
+	padding: 0 1em;
 }
 
 .blogbar {
 	float: left;
 	width: 25%;
-	padding: 0 1%;
+	padding: 0 1em;
 }
 
 #sidebar {
@@ -190,6 +187,7 @@ h3 {
 	color: inherit;
 	width: 90%;
 	text-align : left;
+	padding: 0 0 1em 0;
 	margin: 0 5%;
 	overflow: hidden;
 }
