@@ -22,7 +22,9 @@ rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 <?php endif; ?>
 
-<?php posts_nav_link(' &#8212; ', __('&laquo; Previous Page'), __('Next Page &raquo;')); ?>
+<div class="post">
+<h2><?php posts_nav_link(' &#8212; ', __('&laquo; Previous Page'), __('Next Page &raquo;')); ?></h2>
+</div>
 
 </div>
 

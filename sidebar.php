@@ -1,5 +1,5 @@
 <div id="sidebar">
-<div class="footerbar">
+<div class="authorbar">
 	<h2>Author</h2>
 	<?php echo get_avatar(get_the_author_email(), 100) ?>
 	<p><?php the_author_description(); ?></p>
@@ -10,8 +10,10 @@
 </div>
 
 
-<div class="footerbar">
-<?php get_links_list(); ?>
+<div class="linkbar">
+	<ul>
+	<?php get_links_list(); ?>
+	</ul>
 
 	<h2>Meta</h2>
 	<?php wp_meta(); ?>
@@ -36,7 +38,7 @@
 	</ul>
 </div>
 
-<div class="footerbar">
+<div class="blogbar">
 	<h2>Search</h2>
 	<form id="searchform" method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 		<div>

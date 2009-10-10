@@ -1,5 +1,3 @@
-</div>
-
 <div id="fadeout"></div>
 
 <div id="copyright">This site &copy; <a href="mailto:mike@mikearthur.co.uk">Mike Arthur</a> 2009
