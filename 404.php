@@ -1,5 +1,7 @@
 <?php get_header(); ?>
-<?php get_sidebar(); ?>
+
+<div id="posts">
+<div class="post">
 
 <h2>SORRY CANT FIND YOUR PAGE</h2>
 <img src="<?php bloginfo('template_directory'); ?>/images/404monkey.jpg" alt="PAGE FETCHING MONKEY" />
@@ -10,5 +12,10 @@
 <h3>YOU TYPE IN ADDRESS BAR? YOU TYPE WRONG!</h3>
 <h3>NEED TO GO. NEW PAGE NEED GIVED.</h3>
 <h2>BYE!</h2>
+
+</div>
+</div>
+
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
