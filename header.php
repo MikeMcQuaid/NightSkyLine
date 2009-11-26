@@ -12,7 +12,7 @@
     <link rel="stylesheet" title="Default" type="text/css"
           href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
     <link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.gif" type="image/gif"/>
-    <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>" href="feed/" />
+    <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>" href="/feed/" />
     <link rel="openid.server" href="http://www.myopenid.com/server" />
     <link rel="openid.delegate" href="http://mikearthur.myopenid.com/" />
     <?php wp_head(); ?>
