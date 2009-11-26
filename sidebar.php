@@ -1,14 +1,12 @@
 <div id="sidebar">
 <div class="authorbar">
 	<h2>Author</h2>
-	<?php echo get_avatar(get_the_author_email(), 100) ?>
-	<p><?php the_author_description(); ?></p>
-
+	<?php echo get_avatar(get_the_author_meta('user_email'), 100); ?>
+	<p><?php echo get_the_author_meta('description'); ?></p>
 	<h2>Twitter</h2>
 	<ul id="twitter_update_list"><li>Loading...</li></ul>
 	<p><a href="http://twitter.com/mikearthur" rel="me external">Follow me on Twitter</a></p>
 </div>
-
 
 <div class="linkbar">
 	<ul>
@@ -19,7 +17,7 @@
 	<?php wp_meta(); ?>
 	<ul>
 
-	<li><a href="feed/">
+	<li><a href="/feed/">
 	RSS feed
 	</a></li>
 
