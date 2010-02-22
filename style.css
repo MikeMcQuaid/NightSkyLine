@@ -15,13 +15,16 @@ other than the use of a few CSS draft standards.
 html {
 	background: black;
 	color: white;
+	padding: 0;
+	margin: 0;
 }
 
 body {
 	font: 0.8em sans-serif;
 	color: white;
 	background: black;
-	margin: 2% 0;
+	padding: 0;
+	margin: 0;
 	text-align: left;
 }
 
@@ -45,7 +48,7 @@ h1 {
 	color: white;
 	background-color: inherit;
 	padding: 0;
-	margin: 0;
+	margin: 0.5em 0 0 0;
 }
 
 #description {
@@ -128,7 +131,7 @@ img {
 	background: black;
 	color: gray;
 	text-align: center;
-	padding: 0;
+	padding: 1em 0;
 	margin: 0;
 }
 
