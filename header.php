@@ -29,6 +29,9 @@
 <?php
   $pages = get_pages('sort_column=menu_order');
   foreach ($pages as $page) {
+    if (!empty($page->post_password)) {
+      continue;
+    }
     $link = '  <a href="'.get_page_link($page->ID).'">';
     $link .= strtolower($page->post_title);
     $link .= "</a>\n";
