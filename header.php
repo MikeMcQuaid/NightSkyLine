@@ -4,7 +4,6 @@
   <head profile="http://gmpg.org/xfn/11">
     <?php if (have_posts()) the_post(); rewind_posts(); ?>
     <title><?php wp_title("");if(wp_title("", false)){echo ' - ';}bloginfo('name');?></title>
-    <meta name="generator" content="WordPress <?php bloginfo('version'); ?>" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="author" content="<?php the_author(); ?>"/>
     <meta name="description" content="<?php the_author(); ?>'s homepage"/>
