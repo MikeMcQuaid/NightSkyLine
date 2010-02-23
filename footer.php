@@ -1,6 +1,6 @@
 <div id="fadeout"></div>
 
-<div id="copyright">This site &copy; <a href="mailto:mike@mikearthur.co.uk">Mike Arthur</a> 2009
+<div id="copyright">This site &copy; <a href="mailto:mike@mikearthur.co.uk">Mike Arthur</a> 2010
 <br/>
 London header image &copy; <a href="http://www.flickr.com/photos/peter_schauer/" rel="external">Peter Schauer</a>.
 <br/>
