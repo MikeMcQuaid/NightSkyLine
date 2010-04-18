@@ -32,7 +32,7 @@
       continue;
     }
     $link = '  <a href="'.get_page_link($page->ID).'">';
-    $link .= strtolower($page->post_title);
+    $link .= $page->post_title;
     $link .= "</a>\n";
     echo $link;
   }

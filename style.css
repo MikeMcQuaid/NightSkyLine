@@ -2,14 +2,14 @@
 Theme Name: mike arthur dot co dot you kay
 Theme URI: http://mikearthur.co.uk/
 Description: The theme for Mike Arthur's homepage
-Version: 1.3
+Version: 2.0
 Author: Mike Arthur
 Author URI: http://mikearthur.co.uk/
-Copyright: Mike Arthur 2009
+Copyright: Mike Arthur 2010
 Email:  mike@mikearthur.co.uk
 
 This website complies with all the latest web standards from W3C
-other than the use of a few CSS draft standards.
+other than the use of a few CSS3 hacks.
 */
 
 html {
@@ -20,12 +20,30 @@ html {
 }
 
 body {
-	font: 0.8em sans-serif;
+	font: 1.0em Optima,Corbel,Verdana,sans-serif;
 	color: white;
 	background: black;
 	padding: 0;
 	margin: 0;
 	text-align: left;
+}
+
+a:link {
+	color: inherit;
+}
+
+a:visited {
+	color: inherit;
+}
+
+a:hover {
+	color: white;
+	background: black;
+	text-decoration: underline;
+}
+
+a:active {
+	color: inherit;
 }
 
 #page {
@@ -34,25 +52,22 @@ body {
 }
 
 #title {
-	width: 100%;
 	background : url(images/header.jpg) repeat-x top left;
-	padding: 0;
-	height: 100px;
-	margin: 0;
+	height: 104px;
 	text-align: center;
 }
 
 h1 {
 	text-shadow: 0.1em 0.1em 0.1em gray;
-	font: bold 2.5em sans-serif;
+	font: bold 2.5em Cochin,Cambria,Georgia,serif;
 	color: white;
 	background-color: inherit;
 	padding: 0;
-	margin: 0.5em 0 0 0;
+	margin: 0;
 }
 
 #description {
-	font: bold 1.8em monospace;
+	font: bold 1.5em Menlo,Consolas,monospace;
 	text-shadow: 0.1em 0.1em 0.1em black;
 	background-color: inherit;
 	color: #D3D3D3;
@@ -61,58 +76,66 @@ h1 {
 }
 
 #navbar {
-	width : 90%;
 	text-align: center;
-	border: solid black 1px;
-	-khtml-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
+	border-bottom: solid gray 1px;
 	background: #EEEEEE;
+	background:
+		-moz-linear-gradient(
+			center bottom,
+			#EEEEEE 70%,
+			black 100%
+		);
+	background:
+		-webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0.7, #EEEEEE),
+			color-stop(1.0, black)
+		);
 	color: black;
-	margin: 0.5em 5%;
-	padding: 0.2em 0;
+	padding: 1em 0 0.5em 0;
 }
 
 #navbar a {
-	font: bold 1.2em sans-serif;
-	padding: 0.15em 1.5%;
-	margin: 0;
-	border-left: solid #EEEEEE 3px;
-	border-right: solid #EEEEEE 3px;
-}
-
-#navbar a:hover {
-	border-left: solid #A3A3A3 3px;
-	border-right: solid #A3A3A3 3px;
+	font-weight: bold;
+	font-size: 1.2em;
+	margin: 0 1.5%;
+	text-transform: lowercase;
 }
 
 #posts {
-	width: 90%;
+	background: #FAFAFA;
 	padding: 0;
 	margin: 0 auto;
 }
 
 .post {
-	border: solid gray 1px;
-	-khtml-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
 	overflow: hidden;
-	background: #FCFCFC;
 	color: inherit;
-	padding: 0 2% 0.5em 2%;
-	margin: 1em 0;
+	padding: 0 0 0.5em 0;
+	margin: 0 auto 0 auto;
+	min-width: 25em;
+	max-width: 35em;
 }
 
 h2 {
-	text-shadow: 0.1em 0.1em 0.1em gray;
-	font: bold 1.5em sans-serif;
+	font-style: bold;
+	font-size: 2.2em;
+	margin: 0.5em 0;
+}
+
+h2 a:link {
+	color: black;
+}
+
+h2 a:hover {
+	color: white;
 }
 
 .postdate {
-	text-shadow: 0.1em 0.1em 0.1em gray;
 	font-size: 1.2em;
-	margin: 1em 0 0.5em 0;
+	margin: 0.2em 0;
 }
 
 img {
@@ -120,19 +143,37 @@ img {
         border: none;
 }
 
-#fadeout {
-	clear : both;
-	background: url(images/gradient.png) repeat-x bottom center;
-	padding: 0 0 50px 0;
-}
-
 #copyright {
 	clear : both;
 	background: black;
+	font-size: 0.8em;
+	background:
+		-moz-linear-gradient(
+			center bottom,
+			black 70%,
+			#EEEEEE 100%
+		);
+	background:
+		-webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0.7, black),
+			color-stop(1.0, #EEEEEE)
+		);
 	color: gray;
 	text-align: center;
-	padding: 1em 0;
+	padding: 3em 0 1em 0;
 	margin: 0;
+}
+
+#copyright a:link {
+	color: white;
+}
+
+#copyright a:hover {
+	color: black;
+	background: white;
 }
 
 h3 {
@@ -141,24 +182,12 @@ h3 {
 	margin: 10px 0 5px 0;
 }
 
-.footericon {
-	padding: 0 5% 0 5%;
-	border: none;
-	text-decoration: none;
-}
-
 #wpstats img {
         width:0px;
         height:0px;
         padding:0px;
         border:none;
         overflow:hidden
-}
-
-#blogcontent {
-	margin: 0 5% 0 5%;
-	padding: 0;
-	width: 90%;
 }
 
 .authorbar {
@@ -180,23 +209,20 @@ h3 {
 }
 
 #sidebar {
-	font-size: 0.95em;
+	font-size: 0.8em;
+	border-top: solid gray 1px;
 	float: left;
-	border: solid gray 1px;
-	-khtml-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
 	background: #EEEEEE;
 	color: inherit;
 	width: 90%;
-	text-align : left;
-	padding: 0 0 1em 0;
-	margin: 0 5%;
+	text-align: left;
+	padding: 0 5%;
+	margin: 0 auto;
 	overflow: hidden;
 }
 
 #sidebar h2 {
-	font-size: 1.0em;
+	font-size: 1.2em;
 }
 
 #sidebar li, #sidebar ul {
@@ -210,15 +236,10 @@ h3 {
 }
 
 #comments {
-	border: solid gray 1px;
-	-khtml-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	overflow: hidden;
-	background: #EEEEEE;
-	color: inherit;
-	padding: 0 2% 5px 2%;
-	margin: 0 0 10px 0;
+	padding: 0 0 0.5em 0;
+	margin: 0 auto 0 auto;
+	min-width: 25em;
+	max-width: 35em;
 }
 
 .comment {
@@ -233,12 +254,12 @@ h3 {
 }
 
 .comment-author {
-	border: solid white 1px;
+	border: solid black 1px;
 	-khtml-border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	background: gray;
-	color: white;
+	background: #EEEEEE;
+	color: inherit;
 	padding: 0 2% 5px 2%;
 	margin: 0 0 10px 0;
 }

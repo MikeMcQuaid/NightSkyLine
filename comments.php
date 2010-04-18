@@ -3,12 +3,6 @@
 <p><?php _e('Enter your password to view comments.'); ?></p>
 <?php return; endif; ?>
 
-<h4><?php comments_number(__('No Comments'), __('1 Comment'), __('% Comments')); ?> 
-<?php if ( comments_open() ) : ?>
-	<a href="#postcomment" title="<?php _e("Leave a comment"); ?>">&raquo;</a>
-<?php endif; ?>
-</h4>
-
 <?php if ( $comments ) : ?>
 <?php foreach ($comments as $comment) : ?>
     <?php $class = 'comment'; 
@@ -21,9 +15,6 @@
 	</div>
 
 <?php endforeach; ?>
-
-<?php else : // If there are no comments yet ?>
-	<p><?php _e('No comments yet.'); ?></p>
 <?php endif; ?>
 
 <?php if ( comments_open() ) : ?>
