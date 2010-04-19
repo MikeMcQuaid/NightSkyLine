@@ -133,7 +133,8 @@ h2 a:hover {
 	color: white;
 }
 
-.postdate {
+.postdate, .lifestream_date {
+	font-style: normal;
 	font-size: 1.2em;
 	margin: 0.2em 0;
 }
@@ -177,7 +178,6 @@ img {
 }
 
 h3 {
-	text-shadow: 0.1em 0.1em 0.1em gray;
 	font-size: 1.2em;
 	margin: 10px 0 5px 0;
 }
