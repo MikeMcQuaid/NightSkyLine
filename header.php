@@ -24,7 +24,7 @@
 </div>
 
 <div id="navbar">
-  <a href="/">blog</a>
+  <a href="/">Blog</a>
 <?php
   $pages = get_pages('sort_column=menu_order');
   foreach ($pages as $page) {
