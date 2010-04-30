@@ -14,8 +14,9 @@ rel="bookmark" title="<?php echo $post->post_title; ?>"><?php echo $post->post_t
 <?php endif; ?>
 
 </div>
-</div>
 
 <?php get_sidebar(); ?>
+
+</div>
 
 <?php get_footer(); ?>

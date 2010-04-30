@@ -26,8 +26,8 @@ rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 <h3><?php posts_nav_link(' &#8212; ', __('&laquo; Previous Page'), __('Next Page &raquo;')); ?></h3>
 </div>
 
-</div>
-
 <?php get_sidebar(); ?>
+
+</div>
 
 <?php get_footer(); ?>

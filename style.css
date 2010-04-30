@@ -13,16 +13,12 @@ other than the use of a few CSS3 hacks.
 */
 
 html {
-	background: black;
-	color: white;
 	padding: 0;
 	margin: 0;
 }
 
 body {
 	font: 1.0em Optima,Corbel,Verdana,sans-serif;
-	color: white;
-	background: black;
 	padding: 0;
 	margin: 0;
 	text-align: left;
@@ -37,18 +33,13 @@ a:visited {
 }
 
 a:hover {
-	color: white;
-	background: black;
 	text-decoration: underline;
 }
 
-a:active {
-	color: inherit;
-}
-
 #page {
-	background: white;
+	background: #AAAAAA;
 	color: black;
+	padding: 0 0 2em 0;
 }
 
 #title {
@@ -60,7 +51,7 @@ a:active {
 h1 {
 	text-shadow: 0.1em 0.1em 0.1em gray;
 	font: bold 2.5em Cochin,Cambria,Georgia,serif;
-	color: white;
+	color: #EEEEEE;
 	background-color: inherit;
 	padding: 0;
 	margin: 0;
@@ -70,19 +61,19 @@ h1 {
 	font: bold 1.5em Menlo,Consolas,monospace;
 	text-shadow: 0.1em 0.1em 0.1em black;
 	background-color: inherit;
-	color: #D3D3D3;
+	color: #888888;
 	padding: 0.1em;
 	margin: 0;
 }
 
 #navbar {
 	text-align: center;
-	border-bottom: solid gray 1px;
-	background: #EEEEEE;
+	border-bottom: solid black 1px;
+	background: #222222;
 	background:
 		-moz-linear-gradient(
 			center bottom,
-			#EEEEEE 70%,
+			#222222 70%,
 			black 100%
 		);
 	background:
@@ -90,52 +81,59 @@ h1 {
 			linear,
 			left bottom,
 			left top,
-			color-stop(0.7, #EEEEEE),
+			color-stop(0.7, #222222),
 			color-stop(1.0, black)
 		);
-	color: black;
+	background:
+		-khtml-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0.7, #222222),
+			color-stop(1.0, black)
+		);
+	color: #EEEEEE;
 	padding: 1em 0 0.5em 0;
 }
 
 #navbar a {
 	font-weight: bold;
+	text-decoration: none;
 	font-size: 1.2em;
 	margin: 0 1.5%;
 	text-transform: lowercase;
 }
 
+#navbar a:hover {
+	text-decoration: underline;
+}
 #posts {
 	background: #FAFAFA;
 	padding: 0;
-	margin: 0 auto;
+	padding: 0 5em 1em 5em;
+	margin: 0 auto 0 auto;
+	min-width: 25em;
+	max-width: 35em;
+	-moz-box-shadow: 0px 0px 50px black;
+	-webkit-box-shadow: 0px 0px 50px black;
+	-khtml-box-shadow: 0px 0px 50px black;
+	box-shadow: 0px 0px 50px black;
 }
 
 .post {
+	background: white;
 	overflow: hidden;
 	color: inherit;
-	padding: 0 0 0.5em 0;
-	margin: 0 auto 0 auto;
-	width: 30em;
-	min-width: 25em;
-	max-width: 35em;
 }
 
 #nextpage {
-	padding: 0 0 5em 0;
+	padding: 0 0 2em 0;
 }
 
 h2 {
 	font-style: bold;
 	font-size: 2.3em;
 	margin: 0.5em 0 0em 0;
-}
-
-h2 a:link {
-	color: black;
-}
-
-h2 a:hover {
-	color: white;
 }
 
 .postdate, .lifestream_date {
@@ -148,39 +146,6 @@ h2 a:hover {
 img {
         text-decoration: none;
         border: none;
-}
-
-#copyright {
-	clear : both;
-	background: black;
-	font-size: 0.8em;
-	background:
-		-moz-linear-gradient(
-			center bottom,
-			black 70%,
-			#EEEEEE 100%
-		);
-	background:
-		-webkit-gradient(
-			linear,
-			left bottom,
-			left top,
-			color-stop(0.7, black),
-			color-stop(1.0, #EEEEEE)
-		);
-	color: gray;
-	text-align: center;
-	padding: 3em 0 1em 0;
-	margin: 0;
-}
-
-#copyright a:link {
-	color: white;
-}
-
-#copyright a:hover {
-	color: black;
-	background: white;
 }
 
 h3 {
@@ -207,34 +172,25 @@ h4 {
         overflow: hidden
 }
 
-.authorbar {
+#linkbar {
 	float: left;
-	width: 40%;
-	padding: 0 1em;
+	padding: 0 0 1em 0;
 }
 
-.linkbar {
+#blogbar {
 	float: left;
-	width: 25%;
-	padding: 0 1em;
-}
-
-.blogbar {
-	float: left;
-	width: 25%;
-	padding: 0 1em;
+	padding: 0 30% 1em 0;
 }
 
 #sidebar {
 	font-size: 0.8em;
-	border-top: solid gray 1px;
-	float: left;
-	background: #EEEEEE;
-	color: inherit;
-	width: 90%;
+	border-top: solid black 1px;
+	background: #333333;
+	color: #DDDDDD;
+	width: 100%;
 	text-align: left;
-	padding: 0 5%;
-	margin: 0 auto;
+	padding: 0 6.25em 0 6.25em;
+	margin: 0 0 0 -6.25em;
 	overflow: hidden;
 }
 
@@ -262,9 +218,9 @@ h4 {
 
 .comment {
 	border: solid gray 1px;
-	-khtml-border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
 	background: white;
 	color: inherit;
 	padding: 0 2% 5px 2%;
@@ -273,9 +229,9 @@ h4 {
 
 .comment-author {
 	border: solid black 1px;
-	-khtml-border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
 	background: #EEEEEE;
 	color: inherit;
 	padding: 0 2% 5px 2%;
