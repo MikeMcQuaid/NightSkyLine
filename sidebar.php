@@ -15,10 +15,10 @@
 
 	<h2>Copyright</h2>
 	<ul>
-	<a href="mailto:mike@mikearthur.co.uk">Mike Arthur</a> &copy; 2010
+	<li><a href="mailto:mike@mikearthur.co.uk">Mike Arthur</a> &copy; 2010</li>
 	</ul>
 	<ul>
-	<a href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">CC-BY-NC-SA</a> license
+	<li><a href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">CC-BY-NC-SA</a> license</li>
 	</ul>
 </div>
 
