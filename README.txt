@@ -8,3 +8,7 @@ This has been adapted from the default Wordpress theme by
 Michael Heileman.
 
 The skyline reflects wherever I'm living at the time.
+
+This theme makes no attempt to look nice on IE6. Anyone who still uses
+it clearly hates the web anyway so I don't care about my site looking
+nice to them.
