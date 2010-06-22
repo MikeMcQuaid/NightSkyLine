@@ -15,7 +15,7 @@
 
 	<h2>Copyright</h2>
 	<ul>
-	<li><a href="mailto:mike@mikearthur.co.uk">Mike Arthur</a> &copy; 2010</li>
+	<li><a href="mailto:mike@mikemcquaid.com">Mike McQuaid</a> &copy; 2010</li>
 	</ul>
 	<ul>
 	<li><a href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">CC-BY-NC-SA</a> license</li>

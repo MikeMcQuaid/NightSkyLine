@@ -1,4 +1,4 @@
-This is the theme I use for http://mikearthur.co.uk/
+This is the theme I use for http://mikemcquaid.com/
 
 I've tried to keep it fairly generic but until I write some Wordpress
 plugins then there's a few bits that are specific to my site. They
