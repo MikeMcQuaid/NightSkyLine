@@ -108,10 +108,9 @@ h1 {
 #navbar a:hover {
 	text-decoration: underline;
 }
-#posts {
+#posts, #content {
 	background: #FAFAFA;
-	padding: 0;
-	padding: 0 5em 1em 5em;
+	padding: 0.5em 5em 1em 5em;
 	margin: 0 auto 0 auto;
 	min-width: 25em;
 	max-width: 35em;
@@ -132,7 +131,7 @@ h1 {
 h2 {
 	font-weight: bold;
 	font-size: 2.3em;
-	margin: 0.5em 0 0em 0;
+	margin: 0.5em 0 0 0;
 }
 
 .postdate, .lifestream_date {
