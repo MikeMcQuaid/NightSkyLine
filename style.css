@@ -108,7 +108,7 @@ h1 {
 #navbar a:hover {
 	text-decoration: underline;
 }
-#posts, #content {
+#posts {
 	background: #FAFAFA;
 	padding: 0.5em 5em 1em 5em;
 	margin: 0 auto 0 auto;
@@ -134,7 +134,7 @@ h2 {
 	margin: 0.5em 0 0 0;
 }
 
-.postdate, .lifestream_date {
+.postdate, #lifestream h2 {
 	font-style: normal;
 	font-variant: normal;
 	font-size: 1.2em;
@@ -193,6 +193,16 @@ h4 {
 	padding: 0;
 	margin: 0;
 	list-style: none;
+}
+
+#lifestream {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+#lifestream li {
+	list-style: disc;
 }
 
 #comments {
