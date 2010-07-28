@@ -1,32 +1,45 @@
 <div id="sidebar">
-<div id="blogbar">
+<div id="leftbar">
+	<ul>
+	<?php if(!function_exists('dynamic_sidebar')||!dynamic_sidebar('LeftFooterSideBar')) : ?>
+	<li>
 	<h2>Search</h2>
 	<form id="searchform" method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 		<div>
-		<input type="text" name="s" id="s" size="12" />
-		<input type="submit" value="<?php _e('?'); ?>" />
+		<input type="text" name="s" id="s" value="" />
+		<input type="submit" id="searchsubmit" value="<?php _e('Search'); ?>" />
 		</div>
 	</form>
+	</li>
 
+	<li>
 	<h2>Categories</h2>
 	<ul>
 	<?php wp_list_cats(); ?>
 	</ul>
+	</li>
 
+	<li>
 	<h2>Copyright</h2>
 	<ul>
-	<li><a href="mailto:mike@mikemcquaid.com">Mike McQuaid</a> &copy; 2010</li>
+	<li><a href="http://github.com/mikemcquaid/NightSkyLine/">NightSkyLine theme</a></li>
+	<li>&copy; <a href="http://mikemcquaid.com/">Mike McQuaid</a> 2010</li>
 	</ul>
-	<ul>
-	<li><a href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">CC-BY-NC-SA</a> license</li>
+	</li>
+	<?php endif; ?>
 	</ul>
 </div>
 
-<div id="linkbar">
+<div id="rightbar">
+	<ul>
+	<?php if(!function_exists('dynamic_sidebar')||!dynamic_sidebar('RightFooterSideBar')) : ?>
+	<li>
 	<ul>
 	<?php get_links_list(); ?>
 	</ul>
+	</li>
 
+	<li>
 	<h2>Meta</h2>
 	<?php wp_meta(); ?>
 	<ul>
@@ -39,14 +52,12 @@
 	Wordpress powered
 	</a></li>
 
-	<li><a href="http://kernel.org" rel="external">
-	Linux powered
-	</a></li>
-
 	<li><a href="http://validator.w3.org/check/referer?verbose=1" rel="external">
 	XHTML valid
 	</a></li>
-
+	</ul>
+	</li>
+	<?php endif; ?>
 	</ul>
 </div>
 </div>

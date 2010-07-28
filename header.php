@@ -12,8 +12,6 @@
           href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
     <link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.gif" type="image/gif"/>
     <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>" href="/feed/" />
-    <link rel="openid.server" href="http://www.myopenid.com/server" />
-    <link rel="openid.delegate" href="http://mikemcquaid.myopenid.com/" />
     <?php wp_head(); ?>
   </head>
 <body>
@@ -24,17 +22,10 @@
 </div>
 
 <div id="navbar">
-  <a href="/">Blog</a>
-<?php
-  $pages = get_pages('sort_column=menu_order');
-  foreach ($pages as $page) {
-    if (!empty($page->post_password)) {
-      continue;
-    }
-    $link = '  <a href="'.get_page_link($page->ID).'">';
-    $link .= $page->post_title;
-    $link .= "</a>\n";
-    echo $link;
-  }
-?>
+  <?php
+  if (function_exists('wp_nav_menu'))
+    wp_nav_menu(array('menu'=>'header','container'=>''));
+  else
+    wp_page_menu();
+  ?>
 </div>

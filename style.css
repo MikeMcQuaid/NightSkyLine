@@ -162,14 +162,16 @@ h4 {
 	margin: 1.2em 0 -0.8em 0;
 }
 
-#linkbar {
+#leftbar {
 	float: left;
 	padding: 0 0 1em 0;
+	width: 49%;
 }
 
-#blogbar {
-	float: left;
-	padding: 0 30% 1em 0;
+#rightbar {
+	float: right;
+	padding: 0 0 1em 0;
+	width: 49%;
 }
 
 #sidebar {
@@ -244,4 +246,17 @@ table, th, td {
 
 #footer {
 	text-align: center;
+}
+
+.widget_search label {
+	display: none;
+}
+
+.menu li {
+	display: inline;
+}
+
+.menu, .page_item {
+	margin: 0;
+	padding: 0;
 }
