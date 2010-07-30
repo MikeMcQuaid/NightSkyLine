@@ -58,7 +58,7 @@ h1 {
 	margin: 0;
 }
 
-#description {
+#tagline {
 	font: bold 1.5em Menlo,Consolas,monospace;
 	text-shadow: 0.1em 0.1em 0.1em black;
 	background-color: inherit;
