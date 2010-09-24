@@ -32,13 +32,13 @@
 
 <?php else : ?>
 
-<p><input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
+<p><input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) _e('required="required"'); ?>/>
 <label for="author"><small>Name <?php if ($req) _e('(required)'); ?></small></label></p>
 
-<p><input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
+<p><input type="email" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) _e('required="required"'); ?>/>
 <label for="email"><small>Mail (will not be published) <?php if ($req) _e('(required)'); ?></small></label></p>
 
-<p><input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
+<p><input type="url" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
 <label for="url"><small>Website</small></label></p>
 
 <?php endif; ?>

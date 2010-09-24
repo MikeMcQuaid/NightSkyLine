@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes();?>>
+<html <?php language_attributes();?>>
   <head>
     <?php if (have_posts()) the_post(); rewind_posts(); ?>
     <title><?php wp_title("");if(wp_title("", false)){echo ' - ';}bloginfo('name');?></title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
     <meta name="author" content="<?php the_author(); ?>"/>
     <meta name="description" content="<?php the_author(); ?>'s homepage"/>
     <meta name="keywords" content="<?php the_author(); ?>, <?php bloginfo('name'); ?>, <?php bloginfo('description'); ?>"/>
-    <link rel="stylesheet" title="Default" type="text/css"
-          href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
-    <link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.gif" type="image/gif"/>
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
+    <link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.gif" />
     <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>" href="/feed/" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <link rel="profile" href="http://gmpg.org/xfn/11" />

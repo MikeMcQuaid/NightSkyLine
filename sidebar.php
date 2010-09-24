@@ -6,7 +6,7 @@
 	<h2>Search</h2>
 	<form id="searchform" method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 		<div>
-		<input type="text" name="s" id="s" value="" />
+		<input type="search" name="s" id="s" value="" placeholder="Search <?php bloginfo('name'); ?>" required="required"/>
 		<input type="submit" id="searchsubmit" value="<?php _e('Search'); ?>" />
 		</div>
 	</form>
