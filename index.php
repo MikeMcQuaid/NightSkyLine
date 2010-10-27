@@ -9,8 +9,8 @@ rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 	<p class="postdate"><?php the_date('','',''); ?> @ <?php the_time() ?></p>
 		<?php the_content(__('(more...)')); ?>
          <?php wp_link_pages(); ?>
-	   <p><strong>Posted in <?php the_category(', ') ?></strong></p>
-           <p><strong>
+	   <p class="postcategory"><strong>Posted in <?php the_category(', ') ?></strong></p>
+           <p class="postcomments"><strong>
            <?php comments_popup_link('No Comments &#187;', '1 Comment
                                       &#187;','% Comments &#187;'); ?>
            </strong></p>

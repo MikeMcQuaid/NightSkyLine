@@ -35,10 +35,6 @@ a:visited {
 	color: inherit;
 }
 
-a:hover {
-	text-decoration: underline;
-}
-
 #page {
 	padding: 0 0 2em 0;
 }
@@ -259,4 +255,40 @@ table, th, td {
 .menu, .page_item {
 	margin: 0;
 	padding: 0;
+}
+
+@media print {
+	body {
+		background: white;
+		color: black;
+		margin: 0 12pt;
+		font-size: 12pt;
+	}
+	#title, #navbar, #sidebar, #footer, #nextpage,
+		.postcategory, .postcomments, object {
+		display: none;
+	}
+	h1, h2, h3, h4 {
+		page-break-inside: avoid;
+		page-break-after: avoid;
+	}
+	#posts {
+		padding: 0;
+		margin: 0;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		-khtml-box-shadow: none;
+		box-shadow: none;
+		float: none;
+		min-width: 100%;
+		max-width: 100%;
+		width: 100%;
+	}
+	p {
+		page-break-inside: avoid;
+	}
+	a {
+		text-decoration: none;
+	}
 }
