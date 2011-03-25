@@ -46,7 +46,7 @@ a:visited {
 }
 
 h1 {
-	text-shadow: 0.1em 0.1em 0.1em gray;
+	text-shadow: 0 0 5px black;
 	font: bold 2.5em Cochin,Cambria,Georgia,serif;
 	color: #EEEEEE;
 	background-color: inherit;
@@ -55,10 +55,10 @@ h1 {
 }
 
 #tagline {
-	font: bold 1.5em Menlo,Consolas,monospace;
-	text-shadow: 0.1em 0.1em 0.1em black;
+	font: 1.5em Menlo,Consolas,monospace;
+	text-shadow: 0 0 1px black;
 	background-color: inherit;
-	color: #888888;
+	color: white;
 	padding: 0.1em;
 	margin: 0;
 }
