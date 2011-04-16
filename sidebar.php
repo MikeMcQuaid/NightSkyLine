@@ -23,7 +23,7 @@
 	<h2>Copyright</h2>
 	<ul>
 	<li><a href="http://github.com/mikemcquaid/NightSkyLine/">NightSkyLine theme</a></li>
-	<li>&copy; <a href="http://mikemcquaid.com/">Mike McQuaid</a> 2010</li>
+	<li>&copy; <a href="http://mikemcquaid.com/">Mike McQuaid</a></li>
 	</ul>
 	</li>
 	<?php endif; ?>
