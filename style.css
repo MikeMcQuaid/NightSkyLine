@@ -285,6 +285,9 @@ table, th, td {
 		max-width: 100%;
 		width: 100%;
 	}
+	.pagebreak {
+		page-break-before: always;
+	}
 	p {
 		page-break-inside: avoid;
 	}
