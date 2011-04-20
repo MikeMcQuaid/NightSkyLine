@@ -7,6 +7,7 @@
     <meta name="author" content="<?php the_author(); ?>"/>
     <meta name="description" content="<?php the_author(); ?>'s homepage"/>
     <meta name="keywords" content="<?php the_author(); ?>, <?php bloginfo('name'); ?>, <?php bloginfo('description'); ?>"/>
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="screen, print" />
     <link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.gif" />
     <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>" href="/feed/" />

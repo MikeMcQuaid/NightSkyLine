@@ -285,3 +285,45 @@ table, th, td {
 		text-decoration: none;
 	}
 }
+
+@media only screen and (max-device-width: 480px) {
+	h1 {
+		font-size: 1.5em;
+		padding-top: 0.5em;
+	}
+
+	h2 {
+		font-size: 1.5em;
+	}
+
+	#tagline {
+		font-size: 1.2em;
+	}
+
+	#navbar a {
+		font-size: 0.90em;
+	}
+
+	.postdate {
+		font-size: 1.0em;
+	}
+
+	#title {
+		height: 54px;
+	}
+
+	#posts {
+		padding: 0;
+		margin: 0;
+		min-width: 10em;
+	}
+
+	.post {
+		margin: 0 1em;
+	}
+
+	#sidebar {
+		padding: 0;
+		margin: 0;
+	}
+}
