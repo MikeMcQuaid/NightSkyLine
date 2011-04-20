@@ -130,7 +130,7 @@ h2 {
 	margin: 0.5em 0 0 0;
 }
 
-.postdate, #lifestream h2 {
+.postdate {
 	font-style: normal;
 	font-variant: normal;
 	font-size: 1.2em;
@@ -191,16 +191,6 @@ h4 {
 	padding: 0;
 	margin: 0;
 	list-style: none;
-}
-
-#lifestream {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-
-#lifestream li {
-	list-style: disc;
 }
 
 #comments {
