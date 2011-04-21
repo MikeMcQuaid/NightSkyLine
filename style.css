@@ -13,25 +13,16 @@ other than the use of a few CSS3 hacks. It doesn't even try to
 work in IE6.
 */
 
-html {
-	padding: 0;
-	margin: 0;
-	background: #AAAAAA;
-	color: black;
-}
-
-body {
+html, body {
 	font: 1.0em Optima,Corbel,Verdana,sans-serif;
 	padding: 0;
 	margin: 0;
 	text-align: left;
+	background: #AAAAAA;
+	color: black;
 }
 
-a:link {
-	color: inherit;
-}
-
-a:visited {
+a:link, a:visited {
 	color: inherit;
 }
 
@@ -40,7 +31,7 @@ a:visited {
 }
 
 #title {
-	background : url(images/header.jpg) repeat-x top left;
+	background: url(images/header.jpg) repeat-x top left;
 	height: 104px;
 	text-align: center;
 }
@@ -50,7 +41,6 @@ h1 {
 	font: bold 2.5em Cochin,Cambria,Georgia,serif;
 	color: #EEEEEE;
 	background-color: inherit;
-	padding: 0;
 	margin: 0;
 }
 
@@ -104,12 +94,13 @@ h1 {
 #navbar a:hover {
 	text-decoration: underline;
 }
+
 #posts {
 	background: #FAFAFA;
-	padding: 0.5em 5em 1em 5em;
+	padding: 0.5em 0 1em 0;
 	margin: 0 auto 0 auto;
-	min-width: 25em;
-	max-width: 35em;
+	min-width: 35em;
+	max-width: 45em;
 	-moz-box-shadow: 0px 0px 50px black;
 	-webkit-box-shadow: 0px 0px 50px black;
 	-khtml-box-shadow: 0px 0px 50px black;
@@ -117,11 +108,14 @@ h1 {
 }
 
 .post {
-	overflow: hidden;
+	margin: 0;
+	padding: 0 5em 0.5em 5em;
+	min-width: 25em;
+	max-width: 35em;
 }
 
 #nextpage {
-	padding: 0 0 2em 0;
+	padding: 0 5em 2em 5em;
 }
 
 h2 {
@@ -138,8 +132,8 @@ h2 {
 }
 
 img {
-        text-decoration: none;
-        border: none;
+	text-decoration: none;
+	border: none;
 }
 
 h3 {
@@ -159,26 +153,29 @@ h4 {
 }
 
 #leftbar {
+	width: 50%;
 	float: left;
-	padding: 0 0 1em 0;
-	width: 49%;
 }
 
-#rightbar {
+#rightsidebar {
+	width: 50%;
 	float: right;
-	padding: 0 0 1em 0;
-	width: 49%;
+}
+
+.sidebartext {
+	font-size: 0.8em;
+	padding-right: 1em;
 }
 
 #sidebar {
-	font-size: 0.8em;
 	border-top: solid black 1px;
 	background: #333333;
 	color: #DDDDDD;
-	width: 100%;
 	text-align: left;
-	padding: 0 6.25em 0 6.25em;
-	margin: 0 0 0 -6.25em;
+	padding: 0 5em;
+	margin: 0;
+	min-width: 25em;
+	max-width: 35em;
 	overflow: hidden;
 }
 
@@ -224,7 +221,6 @@ h4 {
 #commentinput {
 	width: 100%;
 }
-
 
 table, th, td {
 	border: none;
@@ -313,17 +309,20 @@ table, th, td {
 	}
 
 	#posts {
-		padding: 0;
-		margin: 0;
 		min-width: 10em;
 	}
 
-	.post {
-		margin: 0 1em;
+	.post, #comments, #sidebar {
+		min-width: 10em;
+		padding: 0 1em;
 	}
 
-	#sidebar {
-		padding: 0;
-		margin: 0;
+	#nextpage {
+		padding: 0 1em 2em 1em;
+	}
+
+	#leftbar, #rightsidebar {
+		width: 100%;
+		float: none;
 	}
 }

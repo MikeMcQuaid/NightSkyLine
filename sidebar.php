@@ -1,5 +1,6 @@
 <div id="sidebar">
 <div id="leftbar">
+<div class="sidebartext">
 	<ul>
 	<?php if(!function_exists('dynamic_sidebar')||!dynamic_sidebar('LeftFooterSideBar')) : ?>
 	<li>
@@ -29,8 +30,10 @@
 	<?php endif; ?>
 	</ul>
 </div>
+</div>
 
 <div id="rightbar">
+<div class="sidebartext">
 	<ul>
 	<?php if(!function_exists('dynamic_sidebar')||!dynamic_sidebar('RightFooterSideBar')) : ?>
 	<li>
@@ -59,5 +62,6 @@
 	</li>
 	<?php endif; ?>
 	</ul>
+</div>
 </div>
 </div>
