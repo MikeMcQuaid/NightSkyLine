@@ -108,6 +108,7 @@ h1 {
 }
 
 .post {
+	overflow: hidden;
 	margin: 0;
 	padding: 0 5em 0.5em 5em;
 	min-width: 25em;
@@ -132,6 +133,7 @@ h2 {
 }
 
 img {
+	max-width: 100%;
 	text-decoration: none;
 	border: none;
 }
@@ -284,7 +286,8 @@ table, th, td {
 
 @media only screen and (max-device-width: 480px) {
 	h1 {
-		font-size: 1.5em;
+		font-family: serif;
+		font-size: 1.6em;
 		padding-top: 0.5em;
 	}
 
@@ -293,11 +296,12 @@ table, th, td {
 	}
 
 	#tagline {
+		font-family: monospace;
 		font-size: 1.2em;
 	}
 
 	#navbar a {
-		font-size: 0.90em;
+		font-size: 0.80em;
 	}
 
 	.postdate {
