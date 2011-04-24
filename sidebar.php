@@ -61,4 +61,5 @@
 	</ul>
 </div>
 </div>
+<div id="clearbar"/>
 </div>
