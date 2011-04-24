@@ -55,9 +55,6 @@
 	Wordpress powered
 	</a></li>
 
-	<li><a href="http://validator.w3.org/check/referer?verbose=1" rel="external">
-	XHTML valid
-	</a></li>
 	</ul>
 	</li>
 	<?php endif; ?>
