@@ -47,7 +47,7 @@ h1 {
 }
 
 #tagline {
-	font: 1.5em Menlo,Courier,Consolas,monospace;
+	font: 1.5em Menlo,Consolas,Courier,monospace;
 	text-shadow: 0 0 1px black;
 	background-color: inherit;
 	color: white;
