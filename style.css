@@ -19,16 +19,12 @@ html, body {
 	padding: 0;
 	margin: 0;
 	text-align: left;
-	background: #FCFCFC;
+	background: #111111;
 	color: black;
 }
 
 a:link, a:visited {
 	color: inherit;
-}
-
-#page {
-	overflow: hidden;
 }
 
 #title {
@@ -57,11 +53,10 @@ h1 {
 #navbar {
 	text-align: center;
 	border-bottom: solid black 1px;
-	background: black;
 	background:
 		-moz-linear-gradient(
 			center bottom,
-			#222222 70%,
+			#111111 70%,
 			black 100%
 		);
 	background:
@@ -77,7 +72,7 @@ h1 {
 			linear,
 			left bottom,
 			left top,
-			color-stop(0.7, #222222),
+			color-stop(0.7, #111111),
 			color-stop(1.0, black)
 		);
 	color: #EEEEEE;
@@ -96,12 +91,20 @@ h1 {
 	text-decoration: underline;
 }
 
+#posts {
+    background: #FCFCFC;
+    color: inherit;
+}
+
 .post {
-	overflow: hidden;
-	padding: 0 5em 0.5em 5em;
 	margin: 0 auto 0 auto;
+    padding: 0 0 3em 0;
 	min-width: 25em;
 	max-width: 35em;
+}
+
+.postcategory, .postcomments {
+    margin: 0;
 }
 
 #nextpage {
@@ -110,7 +113,8 @@ h1 {
 
 h2 {
 	font: bold 1.8em Constantia,Georgia,serif;
-	margin: 0.5em 0 0 0;
+	margin: 0;
+    padding: 0.5em 0 0 0;
 }
 
 .postdate {
@@ -142,12 +146,12 @@ h4 {
 }
 
 #leftbar {
-	width: 50%;
+	width: 60%;
 	float: left;
 }
 
 #rightbar {
-	width: 50%;
+	width: 40%;
 	float: right;
 }
 
@@ -165,7 +169,9 @@ h4 {
 	background: #111111;
 	color: #DDDDDD;
 	text-align: left;
-	padding: 0 7.5em;
+	margin: 0 auto 0 auto;
+	min-width: 25em;
+	max-width: 35em;
 }
 
 #sidebar h2 {
