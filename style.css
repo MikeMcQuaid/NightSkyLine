@@ -19,7 +19,7 @@ html, body {
 	padding: 0;
 	margin: 0;
 	text-align: left;
-	background: #AAAAAA;
+	background: #FCFCFC;
 	color: black;
 }
 
@@ -28,7 +28,6 @@ a:link, a:visited {
 }
 
 #page {
-	padding: 0 0 2em 0;
 	overflow: hidden;
 }
 
@@ -58,7 +57,7 @@ h1 {
 #navbar {
 	text-align: center;
 	border-bottom: solid black 1px;
-	background: #222222;
+	background: black;
 	background:
 		-moz-linear-gradient(
 			center bottom,
@@ -70,7 +69,7 @@ h1 {
 			linear,
 			left bottom,
 			left top,
-			color-stop(0.7, #222222),
+			color-stop(0.7, #111111),
 			color-stop(1.0, black)
 		);
 	background:
@@ -82,7 +81,7 @@ h1 {
 			color-stop(1.0, black)
 		);
 	color: #EEEEEE;
-	padding: 1em 0 0.5em 0;
+	padding: 0.5em 0 0.25em 0;
 }
 
 #navbar a {
@@ -97,22 +96,10 @@ h1 {
 	text-decoration: underline;
 }
 
-#posts {
-	background: #FAFAFA;
-	padding: 0.5em 0 1em 0;
-	margin: 0 auto 0 auto;
-	min-width: 35em;
-	max-width: 45em;
-	-moz-box-shadow: 0px 0px 50px black;
-	-webkit-box-shadow: 0px 0px 50px black;
-	-khtml-box-shadow: 0px 0px 50px black;
-	box-shadow: 0px 0px 50px black;
-}
-
 .post {
 	overflow: hidden;
-	margin: 0;
 	padding: 0 5em 0.5em 5em;
+	margin: 0 auto 0 auto;
 	min-width: 25em;
 	max-width: 35em;
 }
@@ -175,13 +162,10 @@ h4 {
 
 #sidebar {
 	border-top: solid black 1px;
-	background: #333333;
+	background: #111111;
 	color: #DDDDDD;
 	text-align: left;
-	padding: 0 5em;
-	margin: 0;
-	min-width: 25em;
-	max-width: 35em;
+	padding: 0 7.5em;
 }
 
 #sidebar h2 {
