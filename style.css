@@ -145,6 +145,10 @@ h4 {
 	margin: 1.2em 0 -0.8em 0;
 }
 
+.linkcattitle {
+	display: none;
+}
+
 #leftbar {
 	width: 60%;
 	float: left;
@@ -167,7 +171,7 @@ h4 {
 #sidebar {
 	border-top: solid black 1px;
 	background: #111111;
-	color: #DDDDDD;
+	color: #EEEEEE;
 	text-align: left;
 	margin: 0 auto 0 auto;
 	min-width: 25em;
@@ -193,17 +197,14 @@ h4 {
 }
 
 .comment, .comment-author {
-	border: solid black 1px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-khtml-border-radius: 5px;
+	border: solid #AAAAAA 1px;
 	padding: 0 2% 5px 2%;
 	margin: 0 0 10px 0;
 }
 
 .comment-author {
-	background: #333333;
-	color: #DDDDDD;
+	background: #111111;
+	color: #EEEEEE;
 }
 
 #comments .avatar {
