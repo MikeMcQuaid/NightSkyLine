@@ -317,8 +317,8 @@ table, th, td {
 		float: none;
 	}
 
-	.post > img {
-		width: 100%;
-		height: auto;
+	.post img, td img {
+		max-width: 100%;
+		max-height: auto;
 	}
 }
