@@ -8,7 +8,7 @@
     <?php $class = 'comment'; 
         if (apply_filters(’user_id’,$comment->user_id) == $post->post_author)
             $class ='comment-author';?>
-	<div class="<?=$class?>">
+	<div class="<?php echo $class; ?>">
 	<?php echo get_avatar($comment->comment_author_email, 50) ?>
 	<?php comment_text() ?>
 	<p><cite><?php comment_type(__('Comment'), __('Trackback'), __('Pingback')); ?> <?php _e('by'); ?> <?php comment_author_link() ?> &#8212; <?php comment_date() ?> @ <a href="#comment-<?php comment_ID() ?>"><?php comment_time() ?></a></cite> <?php edit_comment_link(__("Edit This"), ' | '); ?></p>
