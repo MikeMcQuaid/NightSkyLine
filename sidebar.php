@@ -61,5 +61,5 @@
 	</ul>
 </div>
 </div>
-<div id="clearbar"/>
+<div id="clearbar"></div>
 </div>
