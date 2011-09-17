@@ -316,7 +316,8 @@ table, th, td {
 		width: 100%;
 		float: none;
 	}
-	.size-full {
+
+	.post > img {
 		width: 100%;
 		height: auto;
 	}
