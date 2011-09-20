@@ -35,18 +35,21 @@ a:link, a:visited {
 
 h1 {
 	text-shadow: 0 0 5px black;
-	font: bold 2.5em Cochin,Constantia,serif;
+	font-weight: bold;
+	font-size: 2.5em;
 	color: #EEEEEE;
 	background-color: inherit;
 	margin: 0;
+	padding: 0.5em 0 0;
 }
 
 #tagline {
-	font: 1.5em Menlo,Consolas,Courier,monospace;
+	font-weight: bold;
+	font-size: 1.5em;
 	text-shadow: 0 0 1px black;
 	background-color: inherit;
 	color: white;
-	padding: 0.1em;
+	padding: 0.5em 0 0;
 	margin: 0;
 }
 
@@ -112,9 +115,11 @@ h1 {
 }
 
 h2 {
-	font: bold 1.8em Constantia,Georgia,serif;
+	font-weight: bold;
+	font-size: 1.8em;
+	line-height: 110%;
 	margin: 0;
-    padding: 0.5em 0 0 0;
+	padding: 0.5em 0 0 0;
 }
 
 .postdate {
