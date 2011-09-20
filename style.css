@@ -145,6 +145,13 @@ h4 {
 	margin: 1.2em 0 -0.8em 0;
 }
 
+.post img, td img {
+	padding: 1px;
+	border: 1px solid #111111;
+	max-width: 100%;
+	height: auto;
+}
+
 .linkcattitle {
 	display: none;
 }
@@ -322,10 +329,5 @@ table, th, td {
 	#leftbar, #rightbar {
 		width: 100%;
 		float: none;
-	}
-
-	.post img, td img {
-		max-width: 100%;
-		height: auto;
 	}
 }
