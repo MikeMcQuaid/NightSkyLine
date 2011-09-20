@@ -124,6 +124,14 @@ h2 {
 	padding: 0.5em 0 0 0;
 }
 
+h2 a:link {
+	text-decoration: none;
+}
+
+h2 a:hover {
+	text-decoration: underline;
+}
+
 .postdate {
 	font-style: normal;
 	font-variant: normal;
