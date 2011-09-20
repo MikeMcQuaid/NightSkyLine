@@ -44,7 +44,7 @@ h1 {
 	white-space: nowrap;
 }
 
-#tagline {
+#description {
 	font-weight: bold;
 	font-size: 1.5em;
 	text-shadow: 0 0 1px black;
@@ -307,7 +307,7 @@ table, th, td {
 		font-size: 1.4em;
 	}
 
-	#tagline {
+	#description {
 		font-size: 1.2em;
 	}
 

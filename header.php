@@ -19,7 +19,7 @@
 <div id="page">
 <div id="title">
   <h1><?php bloginfo('name'); ?></h1>
-  <p id="tagline"><?php bloginfo('description'); ?></p>
+  <p id="description"><?php bloginfo('description'); ?></p>
 </div>
 
 <div id="navbar">
