@@ -214,10 +214,11 @@ h4 {
 	margin: 0.5em 0 0 0;
 }
 
-#sidebar li, #sidebar ul {
+#sidebar li, #sidebar ul, #navbar li, #navbar ul {
 	padding: 0;
 	margin: 0;
 	list-style: none;
+	display: inline;
 }
 
 #comments {
