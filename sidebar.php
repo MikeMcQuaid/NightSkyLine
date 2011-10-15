@@ -16,7 +16,7 @@
 	<li>
 	<h2>Categories</h2>
 	<ul>
-	<?php wp_list_cats(); ?>
+	<?php wp_dropdown_categories(); ?>
 	</ul>
 	</li>
 
@@ -38,7 +38,7 @@
 	<?php if(!function_exists('dynamic_sidebar')||!dynamic_sidebar('RightFooterSideBar')) : ?>
 	<li>
 	<ul>
-	<?php get_links_list(); ?>
+	<?php wp_list_bookmarks(); ?>
 	</ul>
 	</li>
 
