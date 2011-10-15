@@ -287,6 +287,14 @@ table, th, td {
 	margin-top: 0;
 }
 
+blockquote p:before {
+	display: block;
+	font-size: 5em;
+	content: '\201C';
+	height: 0;
+	margin: 0.5em 0 -0.3em -0.5em;
+}
+
 @media print {
 	body {
 		background: white;
