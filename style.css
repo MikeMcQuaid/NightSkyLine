@@ -39,7 +39,7 @@ h1 {
 }
 
 #title h1 {
-	text-shadow: 0 0 5px black;
+	text-shadow: 0 0 1px black;
 	color: #EEEEEE;
 	background-color: inherit;
 	margin: 0;
@@ -91,8 +91,9 @@ h1 {
 	font-weight: bold;
 	text-decoration: none;
 	font-size: 1.2em;
-	margin: 0 1.5%;
+	margin: 0 0.5em;
 	text-transform: lowercase;
+	display: inline-block;
 }
 
 #navbar a:hover {
@@ -224,8 +225,8 @@ h4 {
 
 .comment, .comment-author {
 	border: solid #AAAAAA 1px;
-	padding: 0 2% 5px 2%;
-	margin: 0 0 10px 0;
+	padding: 0 0.5em;
+	margin: 0 0 1em 0;
 }
 
 .comment-author {
@@ -236,7 +237,7 @@ h4 {
 #comments .avatar {
 	float: right;
 	clear: right;
-	margin: 5px;
+	margin: 0.5em 0 0.5em 0;
 	border: solid black 1px;
 }
 
