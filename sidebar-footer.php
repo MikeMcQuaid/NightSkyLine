@@ -2,7 +2,7 @@
     <div id="leftbar">
         <div class="sidebartext">
             <ul>
-                <?php if (!dynamic_sidebar('LeftFooterSideBar')) : ?>
+                <?php if (!dynamic_sidebar('Footer Left')) : ?>
                     <li>
                         <h2>Search</h2>
                         <?php get_search_form(); ?>
@@ -28,7 +28,7 @@
     <div id="rightbar">
         <div class="sidebartext">
             <ul>
-                <?php if (!dynamic_sidebar('RightFooterSideBar')) : ?>
+                <?php if (!dynamic_sidebar('Footer Right')) : ?>
                     <li><ul><?php wp_list_bookmarks(); ?></ul></li>
                     <li>
                         <h2>Meta</h2>

@@ -28,10 +28,5 @@
     </div>
 
     <div id="navbar">
-        <?php
-        if (function_exists('wp_nav_menu'))
-            wp_nav_menu(array('menu'=>'header', 'container'=>''));
-        else
-            wp_page_menu();
-        ?>
+        <?php wp_nav_menu(array('menu'=>'Header', 'container'=>'')); ?>
     </div>

@@ -1,18 +1,14 @@
 <?php
-if (function_exists('register_sidebar') ) {
-    register_sidebar(array(
-        'name'=>'LeftFooterSideBar',
-        'description'=>'NightSkyLine Left Footer SideBar'
-    ));
-    register_sidebar(array(
-        'name'=>'RightFooterSideBar',
-        'description'=>'NightSkyLine Right Footer SideBar'
-    ));
-}
+register_sidebar(array(
+    'name'=>'Footer Left',
+    'description'=>'Left side of the footer'
+));
+register_sidebar(array(
+    'name'=>'Footer Right',
+    'description'=>'Right side of the footer'
+));
 
-if (function_exists('wp_nav_menu')) {
-    register_nav_menu('Header', 'NightSkyLine Header Menu');
-}
+register_nav_menu('Header', 'Header menu');
 
 function nightskyline_search_form ($form) {
 # Correct invalid XHTML (as of 3.0.1) in search widget
