@@ -372,10 +372,6 @@ blockquote p:before {
 		font-size: 1.1em;
 	}
 
-	#title {
-		height: 54px;
-	}
-
 	#posts {
 		min-width: 10em;
 	}

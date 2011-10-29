@@ -34,6 +34,11 @@ function nightskyline_header_style() {
                 background: url(<?php header_image(); ?>) repeat-x top left;
                 height: <?php echo HEADER_IMAGE_HEIGHT; ?>px;
             }
+            @media only screen and (max-device-width: 480px) {
+                #title {
+                    height: <?php echo HEADER_IMAGE_HEIGHT/2; ?>px;
+                }
+            }
         </style>
     <?php
 }
