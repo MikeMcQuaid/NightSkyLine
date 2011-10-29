@@ -1,16 +1,16 @@
 /*
 Theme Name: NightSkyLine
-Theme URI: http://mikemcquaid.com/
-Description: A night skyline theme using CSS3 shininess.
+Theme URI: https://github.com/mikemcquaid/NightSkyLine
+Description: A night skyline theme using HTML5 and CSS3.
 Version: 2.0
 Author: Mike McQuaid
 Author URI: http://mikemcquaid.com/
 Copyright: Mike McQuaid
 Email: mike@mikemcquaid.com
+License: MIT License
+License URI: http://en.wikipedia.org/wiki/MIT_License
 
-This theme complies with all the latest web standards from W3C
-other than the use of a few CSS3 hacks. It doesn't even try to
-work in IE6.
+This theme esn't even try to work properly in IE6.
 */
 
 html, body {
@@ -28,8 +28,6 @@ a:link, a:visited {
 }
 
 #title {
-	background: url(images/header.jpg) repeat-x top left;
-	height: 104px;
 	text-align: center;
 }
 
@@ -105,7 +103,7 @@ h1 {
     color: inherit;
 }
 
-.post {
+.type-post, .type-page, #nextpage {
 	margin: 0 auto 0 auto;
     padding: 0 0 3em 0;
 	min-width: 25em;
@@ -158,7 +156,7 @@ h4 {
 	margin: 1.5em 0 -0.8em 0;
 }
 
-.post img, td img {
+.type-post img, td img {
 	padding: 1px;
 	border: 1px solid #111111;
 	max-width: 100%;
@@ -166,7 +164,7 @@ h4 {
 	display: block;
 }
 
-.post .wp-smiley {
+.type-post .wp-smiley {
 	border: none;
 	display: inline;
 }
@@ -223,7 +221,7 @@ h4 {
 	max-width: 35em;
 }
 
-.comment, .comment-author {
+.comment, .bypostauthor {
 	border: solid #AAAAAA 1px;
 	padding: 0 0.5em;
 	margin: 0 0 1em 0;
@@ -284,8 +282,20 @@ table, th, td {
 	margin-right: 0;
 }
 
+.wp-caption {
+	/* TODO */
+}
+
 .wp-caption-text {
 	margin-top: 0;
+}
+
+.gallery-caption {
+	/* TODO */
+}
+
+.sticky {
+	/* TODO: sticky post. Can be empty. */
 }
 
 blockquote p:before {
@@ -370,7 +380,7 @@ blockquote p:before {
 		min-width: 10em;
 	}
 
-	.post, #comments, #sidebar {
+	.type-post, .type-page, #nextpage, #comments, #sidebar {
 		min-width: 10em;
 		padding: 0 1em;
 	}
