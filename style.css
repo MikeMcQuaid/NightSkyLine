@@ -157,7 +157,7 @@ h4 {
 }
 
 .type-post img, td img {
-	padding: 1px;
+	padding: 4px;
 	border: 1px solid #111111;
 	max-width: 100%;
 	height: auto;
@@ -388,5 +388,9 @@ blockquote p:before {
 	#leftbar, #rightbar {
 		width: 100%;
 		float: none;
+	}
+
+	.type-post img, td img {
+		padding: 1px;
 	}
 }
