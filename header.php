@@ -23,7 +23,7 @@
 </head>
 <body <?php body_class(); ?>>
     <div id="title">
-        <h1><?php bloginfo('name'); ?></h1>
+        <h1><a href="<?php bloginfo('wpurl'); ?>"><?php bloginfo('name'); ?></a></h1>
         <p id="description"><?php bloginfo('description'); ?></p>
     </div>
 

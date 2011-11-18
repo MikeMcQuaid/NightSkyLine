@@ -94,10 +94,6 @@ h1 {
 	display: inline-block;
 }
 
-#navbar a:hover {
-	text-decoration: underline;
-}
-
 #posts {
     background: #FCFCFC;
     color: inherit;
@@ -126,11 +122,11 @@ h2 {
 	padding: 0.5em 0 0 0;
 }
 
-h2 a:link {
+h1 a:link, h2 a:link, #navbar a:link {
 	text-decoration: none;
 }
 
-h2 a:hover {
+h1 a:hover, h2 a:hover, #navbar a:hover {
 	text-decoration: underline;
 }
 
