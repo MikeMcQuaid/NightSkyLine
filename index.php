@@ -15,9 +15,11 @@
             </p>
             <?php the_content(__('(more...)')); ?>
             <?php wp_link_pages(); ?>
+            <?php if (!is_page()) : ?>
             <p class="postcategory">
                 <strong>Posted in <?php the_category(', ') ?></strong>
             </p>
+            <?php endif; ?>
             <?php if(comments_open()) : ?>
             <p class="postcomments">
                 <strong>
