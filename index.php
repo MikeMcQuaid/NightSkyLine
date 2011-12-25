@@ -16,11 +16,13 @@
             <p class="postcategory">
                 <strong>Posted in <?php the_category(', ') ?></strong>
             </p>
+            <?php if(comments_open()) : ?>
             <p class="postcomments">
                 <strong>
                     <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;','% Comments &#187;'); ?>
                 </strong>
             </p>
+            <?php endif; ?>
         </div>
         <?php comments_template(); ?>
     <?php endwhile; else: ?>
