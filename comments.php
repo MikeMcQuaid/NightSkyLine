@@ -61,7 +61,5 @@
 
                         <?php endif; // If registration required and not logged in ?>
 
-                    <?php else : // Comments are closed ?>
-                        <p><?php _e('Sorry, the comment form is closed at this time.'); ?></p>
                     <?php endif; ?>
                 </div>
