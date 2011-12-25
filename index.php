@@ -9,7 +9,9 @@
                 </a>
             </h2>
             <p class="postdate">
-                <?php the_date('','',''); ?> @ <?php the_time() ?>
+                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
+                    <?php the_date('','',''); ?> @ <?php the_time() ?>
+                </a>
             </p>
             <?php the_content(__('(more...)')); ?>
             <?php wp_link_pages(); ?>

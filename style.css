@@ -122,11 +122,11 @@ h2 {
 	padding: 0.5em 0 0 0;
 }
 
-h1 a:link, h2 a:link, #navbar a:link {
+h1 a:link, h2 a:link, #navbar a:link, .postdate a:link  {
 	text-decoration: none;
 }
 
-h1 a:hover, h2 a:hover, #navbar a:hover {
+h1 a:hover, h2 a:hover, #navbar a:hover, .postdate a:hover {
 	text-decoration: underline;
 }
 
