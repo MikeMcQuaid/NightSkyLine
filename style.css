@@ -92,20 +92,17 @@ h1 {
     color: inherit;
 }
 
-.type-post, .type-page, #nextpage, #noposts {
-	margin: 0 auto 0 auto;
-    padding: 0 0 3em 0;
-	min-width: 25em;
-	max-width: 35em;
+.type-post, .type-page, #nextpage, #noposts, #sidebar, #comments {
+	margin: 0 auto;
+    padding: 0 1em 3em 1em;
+	min-width: 27em;
+	max-width: 37em;
+	overflow: hidden;
 }
 
 .postcategory, .posttags, .postcomments, .more-link {
     margin: 0;
 	font-weight: bold;
-}
-
-#nextpage {
-	padding: 0 5em 2em 5em;
 }
 
 h2 {
@@ -155,6 +152,10 @@ h4 {
 	display: block;
 }
 
+.wp-caption {
+	max-width: 100%;
+}
+
 .type-post .wp-smiley {
 	border: none;
 	display: inline;
@@ -188,9 +189,6 @@ h4 {
 	background: inherit;
 	color: #EEE;
 	text-align: left;
-	margin: 0 auto 0 auto;
-	min-width: 25em;
-	max-width: 35em;
 }
 
 #sidebar h2 {
@@ -209,10 +207,7 @@ h4 {
 }
 
 #comments {
-	padding: 0 0 0.5em 0;
-	margin: 0 auto 0 auto;
-	min-width: 25em;
-	max-width: 35em;
+	padding-bottom: 0.5em;
 }
 
 .comment, .pingback, .trackback {
@@ -286,20 +281,8 @@ table, th, td {
 	margin-right: 0;
 }
 
-.wp-caption {
-	/* TODO */
-}
-
 .wp-caption-text {
 	margin-top: 0;
-}
-
-.gallery-caption {
-	/* TODO */
-}
-
-.sticky {
-	/* TODO: sticky post. Can be empty. */
 }
 
 blockquote:before {
@@ -364,6 +347,14 @@ blockquote:before {
 		font-size: 1.4em;
 	}
 
+	h3 {
+		font-size: 1.2em;
+	}
+
+	h4 {
+		font-size: 1.0em;
+	}
+
 	#description {
 		font-size: 1.2em;
 	}
@@ -382,11 +373,9 @@ blockquote:before {
 
 	.type-post, .type-page, #nextpage, #comments, #sidebar {
 		min-width: 10em;
-		padding: 0 1em;
-	}
-
-	#nextpage {
-		padding: 0 1em 2em 1em;
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		hyphens: auto;
 	}
 
 	#leftbar, #rightbar {
@@ -396,5 +385,30 @@ blockquote:before {
 
 	.type-post img, td img {
 		padding: 1px;
+	}
+
+	#commentform input {
+		width: 15em;
+	}
+
+	#commentform textarea {
+		width: 100%;
+	}
+
+	.type-post embed {
+		max-width: 100px;
+		height: auto;
+	}
+
+	.comment, .pingback, .trackback {
+		padding: 0.5em;
+	}
+
+	blockquote {
+		margin-right: 0;
+	}
+
+	#nextpage a {
+		display: inline-block;
 	}
 }
