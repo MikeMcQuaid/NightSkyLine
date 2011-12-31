@@ -19,7 +19,7 @@ html, body {
 	padding: 0;
 	margin: 0;
 	text-align: left;
-	background: #111111;
+	background: #111;
 	color: black;
 }
 
@@ -30,7 +30,7 @@ a:link, a:visited {
 #title {
 	text-align: center;
 	text-shadow: 0 0 1px black;
-	color: #EEEEEE;
+	color: #EEE;
 	background-color: inherit;
 	font-weight: bold;
 	white-space: nowrap;
@@ -57,7 +57,7 @@ h1 {
 	background:
 		-moz-linear-gradient(
 			center bottom,
-			#111111 70%,
+			#111 70%,
 			black 100%
 		);
 	background:
@@ -65,7 +65,7 @@ h1 {
 			linear,
 			left bottom,
 			left top,
-			color-stop(0.7, #111111),
+			color-stop(0.7, #111),
 			color-stop(1.0, black)
 		);
 	background:
@@ -73,10 +73,10 @@ h1 {
 			linear,
 			left bottom,
 			left top,
-			color-stop(0.7, #111111),
+			color-stop(0.7, #111),
 			color-stop(1.0, black)
 		);
-	color: #EEEEEE;
+	color: #EEE;
 	padding: 0.5em 0 0.25em 0;
 }
 
@@ -101,8 +101,9 @@ h1 {
 	max-width: 35em;
 }
 
-.postcategory, .posttags, .postcomments {
+.postcategory, .posttags, .postcomments, .more-link {
     margin: 0;
+	font-weight: bold;
 }
 
 #nextpage {
@@ -149,7 +150,8 @@ h4 {
 
 .type-post img, td img {
 	padding: 4px;
-	border: 1px solid #111111;
+	border: 1px solid #CCC;
+	border-radius: 5px;
 	max-width: 100%;
 	height: auto;
 	display: block;
@@ -185,8 +187,8 @@ h4 {
 
 #sidebar {
 	border-top: solid black 1px;
-	background: #111111;
-	color: #EEEEEE;
+	background: inherit;
+	color: #EEE;
 	text-align: left;
 	margin: 0 auto 0 auto;
 	min-width: 25em;
@@ -216,29 +218,35 @@ h4 {
 }
 
 .comment, .pingback, .trackback {
-	border: solid #AAAAAA 1px;
-	padding: 0 0.5em;
-	margin: 0.5em 0;
+	border: solid #CCC 1px;
+	border-radius: 5px;
+	padding: 0.5em 1em;
+	margin: 1em 0;
 }
 
 .bypostauthor {
-	background: #111111;
-	color: #EEEEEE;
+	background: #111;
+	color: #EEE;
 }
 
 #comments .avatar {
 	float: right;
 	clear: right;
 	margin: 0.5em 0 0.5em 0;
-	border: solid black 1px;
+	border: solid #CCC 1px;
 }
 
 #commentform label, #commentform .required {
 	font-weight: bold;
 }
 
-#author, #email, #url, #comment {
-	margin-left: 2em;
+#author, #email, #url {
+	margin-right: 2em;
+	float: left;
+}
+
+#commentform textarea {
+	width: 35em;
 }
 
 table, th, td {
@@ -249,7 +257,7 @@ table, th, td {
 	text-align: center;
 }
 
-.widget_search label {
+.comment-form-comment label, .widget_search label, .form-allowed-tags {
 	display: none;
 }
 

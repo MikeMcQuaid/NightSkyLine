@@ -20,19 +20,13 @@
                 the_content('Read More');
                 wp_link_pages();
                 if (!is_page() && get_the_category()) { ?>
-                    <p class="postcategory">
-                        <strong>Posted in <?php the_category(', '); ?></strong>
-                    </p>
+                    <p class="postcategory">Posted in <?php the_category(', '); ?></p>
                 <?php }
                 if (get_the_tags()) { ?>
-                    <p class="posttags">
-                        <strong><?php the_tags(); ?></strong>
-                    </p>
+                    <p class="posttags"><?php the_tags(); ?></p>
                 <?php }
                 if(get_comments_number() > 0 || comments_open()) { ?>
-                    <p class="postcomments">
-                        <strong><?php comments_popup_link(); ?></strong>
-                    </p>
+                    <p class="postcomments"><?php comments_popup_link(); ?></p>
                 <?php } ?>
             </div>
             <?php comments_template();
