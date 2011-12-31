@@ -1,6 +1,6 @@
 <div id="comments">
     <?php if (post_password_required()) { ?>
-        <p><?php _e("Enter your password to view any comments."); ?></p>
+        <p>Enter your password to view any comments.</p>
         <?php return;
     } ?>
 

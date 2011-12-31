@@ -17,7 +17,7 @@
                     </a>
                 </p>
                 <?php }
-                the_content(__('(more...)'));
+                the_content('Read More');
                 wp_link_pages();
                 if (!is_page() && get_the_category()) { ?>
                     <p class="postcategory">
@@ -40,7 +40,7 @@
     } else { ?>
         <div id="noposts">
             <h2>No Posts Found</h2>
-            <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+            <p>Sorry, no posts matched your criteria.</p>
         </div>
     <?php } ?>
 
