@@ -13,7 +13,7 @@
                 <?php if (!is_page()) { ?>
                 <p class="postdate">
                     <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-                        <?php the_date(); ?> @ <?php the_time() ?>
+                        <?php the_date(); ?> at <?php the_time() ?>
                     </a>
                 </p>
                 <?php }
