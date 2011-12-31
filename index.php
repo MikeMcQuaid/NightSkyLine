@@ -10,12 +10,14 @@
                         <?php the_title(); ?>
                     </a>
                 </h2>
+                <?php if (!is_page()) { ?>
                 <p class="postdate">
                     <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
                         <?php the_date(); ?> @ <?php the_time() ?>
                     </a>
                 </p>
-                <?php the_content(__('(more...)'));
+                <?php }
+                the_content(__('(more...)'));
                 wp_link_pages();
                 if (!is_page() && get_the_category()) { ?>
                     <p class="postcategory">
