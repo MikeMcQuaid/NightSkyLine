@@ -35,10 +35,11 @@ a:link, a:visited {
 }
 
 h1 {
-	font-size: 48px;
+	font-size: 2.5em;
 }
 
 #title h1 {
+	font-size: 48px;
 	margin: 0;
 	padding: 0.5em 0 0;
 }
