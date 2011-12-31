@@ -24,5 +24,5 @@
     </div>
 
     <div id="navbar">
-        <?php wp_nav_menu(array("menu"=>"Header", "container"=>"")); ?>
+        <?php wp_nav_menu(array("menu"=>"Header", "container"=>"div", "depth"=>1)); ?>
     </div>
