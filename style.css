@@ -217,13 +217,13 @@ h4 {
 	max-width: 35em;
 }
 
-.comment, .bypostauthor {
+.comment, .pingback, .trackback {
 	border: solid #AAAAAA 1px;
 	padding: 0 0.5em;
-	margin: 0 0 1em 0;
+	margin: 0.5em 0;
 }
 
-.comment-author {
+.bypostauthor {
 	background: #111111;
 	color: #EEEEEE;
 }
