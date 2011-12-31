@@ -4,6 +4,7 @@
     <title>
         <?php wp_title(" - ", true, "right");
         bloginfo("name");
+        global $page, $paged;
         $currentpage = max($paged, $page);
         if ($currentpage >= 2)
             echo " - Page " . $currentpage; ?>

@@ -29,31 +29,26 @@ a:link, a:visited {
 
 #title {
 	text-align: center;
+	text-shadow: 0 0 1px black;
+	color: #EEEEEE;
+	background-color: inherit;
+	font-weight: bold;
+	white-space: nowrap;
 }
 
 h1 {
-	font-weight: bold;
 	font-size: 2.5em;
 }
 
 #title h1 {
-	text-shadow: 0 0 1px black;
-	color: #EEEEEE;
-	background-color: inherit;
 	margin: 0;
 	padding: 0.5em 0 0;
-	white-space: nowrap;
 }
 
 #description {
-	font-weight: bold;
 	font-size: 1.5em;
-	text-shadow: 0 0 1px black;
-	background-color: inherit;
-	color: white;
 	padding: 0.5em 0 0;
 	margin: 0;
-	white-space: nowrap;
 }
 
 #navbar {
@@ -99,7 +94,7 @@ h1 {
     color: inherit;
 }
 
-.type-post, .type-page, #nextpage {
+.type-post, .type-page, #nextpage, #noposts {
 	margin: 0 auto 0 auto;
     padding: 0 0 3em 0;
 	min-width: 25em;
@@ -235,8 +230,12 @@ h4 {
 	border: solid black 1px;
 }
 
-#commentinput {
-	width: 100%;
+#commentform label, #commentform .required {
+	font-weight: bold;
+}
+
+#author, #email, #url, #comment {
+	margin-left: 2em;
 }
 
 table, th, td {

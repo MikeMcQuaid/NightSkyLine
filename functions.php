@@ -39,7 +39,28 @@ function nightskyline_admin_header_style() {
             #headimg {
                 width: <?php echo HEADER_IMAGE_WIDTH; ?>px;
                 height: <?php echo HEADER_IMAGE_HEIGHT; ?>px;
-                background: no-repeat;
+                text-align: center;
+                text-shadow: 0 0 1px black;
+                font-family: Georgia, serif;
+                font-weight: bold;
+                color: #EEEEEE;
+		background-color: inherit;
+            }
+
+            #name {
+		font-size: 2em;
+            }
+
+            #desc {
+	            font-size: 2.4em;
+            }
+
+            #headimg h1 a:link  {
+		text-decoration: none;
+            }
+
+            #headimg h1 a:hover {
+		text-decoration: underline;
             }
         </style>
     <?php

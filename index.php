@@ -36,9 +36,10 @@
             <?php comments_template();
         }
     } else { ?>
-        <p>
-            <?php _e('Sorry, no posts matched your criteria.'); ?>
-        </p>
+        <div id="noposts">
+            <h2>No Posts Found</h2>
+            <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+        </div>
     <?php } ?>
 
     <div id="nextpage">
