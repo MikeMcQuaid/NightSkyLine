@@ -301,7 +301,7 @@ blockquote:before {
 		font-size: 12pt;
 	}
 	#title, #navbar, #sidebar, #footer, #nextpage,
-		.postcategory, .posttags, .postcomments, object {
+		.postcategory, .posttags, .postcomments, object, .more-link {
 		display: none;
 	}
 	h1, h2, h3, h4 {
