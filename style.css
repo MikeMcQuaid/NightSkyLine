@@ -106,7 +106,7 @@ h1 {
 	max-width: 35em;
 }
 
-.postcategory, .postcomments {
+.postcategory, .posttags, .postcomments {
     margin: 0;
 }
 
@@ -310,7 +310,7 @@ blockquote:before {
 		font-size: 12pt;
 	}
 	#title, #navbar, #sidebar, #footer, #nextpage,
-		.postcategory, .postcomments, object {
+		.postcategory, .posttags, .postcomments, object {
 		display: none;
 	}
 	h1, h2, h3, h4 {
