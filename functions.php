@@ -6,7 +6,7 @@ register_nav_menu("Header", "Header menu");
 
 add_theme_support("automatic-feed-links");
 
-define("HEADER_TEXTCOLOR", "ffffff");
+define("HEADER_TEXTCOLOR", "EEEEEE");
 define("HEADER_IMAGE", "%s/images/header.jpg");
 define("HEADER_IMAGE_WIDTH", 786);
 define("HEADER_IMAGE_HEIGHT", 104);
@@ -15,12 +15,33 @@ function nightskyline_header_style() {
     ?>
         <style type="text/css">
             #title {
-                background: url(<?php header_image(); ?>) repeat-x top left;
                 height: <?php echo HEADER_IMAGE_HEIGHT; ?>px;
             }
+
+            <?php if (get_header_image()) { ?>
+                #title {
+                    background: url(<?php header_image(); ?>) repeat-x top left;
+                }
+            <?php } else { ?>
+                #title {
+                    background-color: black;
+                }
+            <?php } ?>
+
+            <?php if (get_header_textcolor() != "blank") { ?>
+                #title {
+                    color: #<?php header_textcolor(); ?>;
+                }
+             <?php } else { ?>
+                #title h1, #description {
+                    visibility: hidden;
+                 }
+            <?php } ?>
+
             @media only screen and (max-device-width: 480px) {
                 #title {
                     height: <?php echo HEADER_IMAGE_HEIGHT/2; ?>px;
+                    background-size: <?php echo HEADER_IMAGE_WIDTH/2; ?>px <?php echo HEADER_IMAGE_HEIGHT/2; ?>px;
                 }
             }
         </style>
@@ -31,22 +52,20 @@ function nightskyline_admin_header_style() {
     ?>
         <style type="text/css">
             #headimg {
-                width: <?php echo HEADER_IMAGE_WIDTH; ?>px;
+                background-color: black;
                 height: <?php echo HEADER_IMAGE_HEIGHT; ?>px;
                 text-align: center;
                 text-shadow: 0 0 1px black;
                 font-family: Georgia, serif;
                 font-weight: bold;
-                color: #EEEEEE;
-		background-color: inherit;
             }
 
             #name {
-		font-size: 2em;
+                font-size: 48px;
             }
 
             #desc {
-	            font-size: 2.4em;
+	            font-size: 29px;
             }
 
             #headimg h1 a:link  {
