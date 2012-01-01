@@ -1,13 +1,14 @@
 <?php get_header(); ?>
 
 <div id="posts">
-    <div class="type-page">
-        <h2 class="storytitle">404 MONKEY</h2>
+    <div id="pagenotfound">
+        <h2 class="storytitle">404 Monkey</h2>
         <p><img src="<?php bloginfo("template_directory"); ?>/images/404monkey.jpg" alt="404 MONKEY" /></p>
-        <p>ME LOOK VERY HARD! NO FIND YOUR PAGE?</p>
-        <p>WHERE IS THE PAGE?</p>
-        <p>YOU TYPE WRONG IN ADDRESS BAR?</p>
-        <p>TRY SEARCH INSTEAD, MAYBE FIND PAGE?</p>
+        <p>Me look very hard! No find your page?</p>
+        <p>Where is the page?</p>
+        <p>You type wrong in address bar?</p>
+        <p>Try search instead, maybe find page?</p>
+        <?php get_search_form(); ?>
     </div>
 </div>
 
