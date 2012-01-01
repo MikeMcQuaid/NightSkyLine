@@ -126,10 +126,13 @@ a:link, a:visited {
 	min-width: 27em;
 	max-width: 37em;
 	overflow: hidden;
-	text-align: justify;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
+}
+
+.type-post p, .type-page p, #noposts p, #comments p {
+	text-align: justify;
 }
 
 .postcategory, .posttags, .postcomments, .more-link {
