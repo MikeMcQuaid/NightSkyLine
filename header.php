@@ -9,7 +9,7 @@
         if ($currentpage >= 2)
             echo " - Page " . $currentpage; ?>
     </title>
-    <meta charset="<?php bloginfo( "charset" ); ?>" />
+    <meta charset="<?php bloginfo("charset"); ?>" />
     <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no" />
     <link rel="stylesheet" href="<?php bloginfo("stylesheet_url"); ?>" media="all" />
     <link rel="pingback" href="<?php bloginfo("pingback_url"); ?>" />
