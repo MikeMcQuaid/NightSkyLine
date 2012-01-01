@@ -16,19 +16,16 @@ function nightskyline_header_style() {
         <style type="text/css">
             #title {
                 min-height: <?php echo HEADER_IMAGE_HEIGHT; ?>px;
+                background-color: black;
             }
 
             <?php if (get_header_image()) { ?>
                 #title {
                     background: url(<?php header_image(); ?>) repeat-x top left;
                 }
-            <?php } else { ?>
-                #title {
-                    background-color: black;
-                }
-            <?php } ?>
+            <?php }
 
-            <?php if (get_header_textcolor() != "blank") { ?>
+            if (get_header_textcolor() != "blank") { ?>
                 #title {
                     color: #<?php header_textcolor(); ?>;
                 }
