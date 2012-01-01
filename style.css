@@ -24,8 +24,6 @@ html, body {
 #title {
 	text-shadow: 0 0 3px black;
 	font-weight: bold;
-	white-space: nowrap;
-	overflow: hidden;
 }
 
 #title, #navbar, #footer {

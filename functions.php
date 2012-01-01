@@ -15,7 +15,7 @@ function nightskyline_header_style() {
     ?>
         <style type="text/css">
             #title {
-                height: <?php echo HEADER_IMAGE_HEIGHT; ?>px;
+                min-height: <?php echo HEADER_IMAGE_HEIGHT; ?>px;
             }
 
             <?php if (get_header_image()) { ?>
@@ -40,7 +40,7 @@ function nightskyline_header_style() {
 
             @media only screen and (max-device-width: 480px) {
                 #title {
-                    height: <?php echo HEADER_IMAGE_HEIGHT/2; ?>px;
+                    min-height: <?php echo HEADER_IMAGE_HEIGHT/2; ?>px;
                     background-size: <?php echo HEADER_IMAGE_WIDTH/2; ?>px <?php echo HEADER_IMAGE_HEIGHT/2; ?>px;
                 }
             }
@@ -53,7 +53,7 @@ function nightskyline_admin_header_style() {
         <style type="text/css">
             #headimg {
                 background-color: black;
-                height: <?php echo HEADER_IMAGE_HEIGHT; ?>px;
+                min-height: <?php echo HEADER_IMAGE_HEIGHT; ?>px;
                 text-align: center;
                 text-shadow: 0 0 1px black;
                 font-family: Georgia, serif;
