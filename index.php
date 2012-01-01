@@ -2,6 +2,11 @@
 
 <div id="posts">
     <?php if (have_posts()) {
+        if (is_search()) { ?>
+            <div id="searchquery">
+                <h2>Search results for: <?php the_search_query(); ?></h2>
+            </div>
+        <?php }
         while (have_posts()) {
             the_post(); ?>
             <div <?php post_class(); ?>>

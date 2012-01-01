@@ -128,7 +128,7 @@ a:link, a:visited {
 	color: inherit;
 }
 
-.type-post, .type-page, #nextpage, #noposts, #sidebar, #comments {
+.type-post, .type-page, #searchquery, #nextpage, #noposts, #sidebar, #comments {
 	margin: 0 auto;
 	padding: 0 1em 3em 1em;
 	min-width: 27em;
@@ -137,6 +137,10 @@ a:link, a:visited {
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
+}
+
+#searchquery {
+	font-weight: bold;
 }
 
 .type-post p, .type-page p, #noposts p, #comments p {
