@@ -40,6 +40,7 @@
         <div id="noposts">
             <h2>No Posts Found</h2>
             <p>Sorry, no posts matched your criteria.</p>
+            <?php get_search_form(); ?>
         </div>
     <?php } ?>
 
