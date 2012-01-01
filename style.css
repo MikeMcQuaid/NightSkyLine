@@ -102,6 +102,10 @@ h1 {
 	min-width: 27em;
 	max-width: 37em;
 	overflow: hidden;
+	text-align: justify;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
 }
 
 .postcategory, .posttags, .postcomments, .more-link {
@@ -380,9 +384,6 @@ blockquote:before {
 
 	.type-post, .type-page, #nextpage, #comments, #sidebar {
 		min-width: 10em;
-		-webkit-hyphens: auto;
-		-moz-hyphens: auto;
-		hyphens: auto;
 	}
 
 	#leftbar, #rightbar {
