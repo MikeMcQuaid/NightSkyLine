@@ -24,7 +24,11 @@ html, body {
 }
 
 a:link, a:visited {
-	color: inherit;
+	color: black;
+}
+
+#title a:link, #title a:visited, #navbar a:link, #navbar a:visited, #sidebar a:link, #sidebar a:visited {
+	color: #EEE;
 }
 
 #title {
@@ -114,7 +118,7 @@ h2 {
 	padding: 0.5em 0 0 0;
 }
 
-h1 a:link, h2 a:link, #navbar a:link, .postdate a:link  {
+h1 a:link, h1 a:visited, h2 a:link, h2 a:visited, #navbar a:link, .postdate a:link, .postdate a:visited {
 	text-decoration: none;
 }
 
@@ -148,8 +152,6 @@ h4 {
 	padding: 4px;
 	border: 1px solid #CCC;
 	border-radius: 5px;
-	max-width: 100%;
-	height: auto;
 	display: block;
 }
 
@@ -386,6 +388,8 @@ blockquote:before {
 
 	.type-post img, td img {
 		padding: 1px;
+		max-width: 100%;
+		height: auto;
 	}
 
 	#commentform input {
