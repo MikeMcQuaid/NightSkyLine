@@ -228,7 +228,7 @@ blockquote:before {
 	margin: 1em 0;
 }
 
-.bypostauthor {
+.bypostauthor, .bypostauthor a:link, .bypostauthor a:visited {
 	background: #111;
 	color: #EEE;
 }
