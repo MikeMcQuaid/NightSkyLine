@@ -66,11 +66,11 @@ function nightskyline_admin_header_style() {
 			}
 
 			#headimg h1 a:link	{
-		text-decoration: none;
+				text-decoration: none;
 			}
 
 			#headimg h1 a:hover {
-		text-decoration: underline;
+				text-decoration: underline;
 			}
 		</style>
 	<?php
