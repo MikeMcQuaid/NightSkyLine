@@ -36,6 +36,7 @@ a:link, a:visited {
 	text-shadow: 0 0 3px black;
 	font-weight: bold;
 	white-space: nowrap;
+	overflow: hidden;
 }
 
 h1 {
@@ -341,6 +342,19 @@ blockquote:before {
 		line-height: 125%;
 	}
 
+	#title h1 {
+		padding-top: 5px;
+		font-size: 24px;
+	}
+
+	#description {
+		font-size: 16px;
+	}
+
+	#navbar a {
+		font-size: 0.9em;
+	}
+
 	h1 {
 		font-size: 1.6em;
 		padding-top: 0.25em;
@@ -356,14 +370,6 @@ blockquote:before {
 
 	h4 {
 		font-size: 1.0em;
-	}
-
-	#description {
-		font-size: 1.2em;
-	}
-
-	#navbar a {
-		font-size: 0.9em;
 	}
 
 	.postdate {
@@ -387,7 +393,6 @@ blockquote:before {
 	}
 
 	.type-post img, td img {
-		padding: 1px;
 		max-width: 100%;
 		height: auto;
 	}
@@ -400,8 +405,8 @@ blockquote:before {
 		width: 100%;
 	}
 
-	.type-post embed {
-		max-width: 100px;
+	.type-post embed, .type-post object {
+		max-width: 100%;
 		height: auto;
 	}
 
@@ -414,6 +419,7 @@ blockquote:before {
 	}
 
 	#nextpage a {
+		padding-bottom: 0.5em;
 		display: inline-block;
 	}
 }
