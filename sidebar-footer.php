@@ -24,7 +24,7 @@
         <div class="sidebartext">
             <ul>
                 <?php if (!dynamic_sidebar("Footer Right")) { ?>
-                    <li>
+                    <li class="widget_search">
                         <h2>Search</h2>
                         <?php get_search_form(); ?>
                     </li>
