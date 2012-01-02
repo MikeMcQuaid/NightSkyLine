@@ -5,22 +5,42 @@
 		<?php if (have_posts()) {
 			if (is_search()) { ?>
 				<div id="search_query">
-					<h2>Search results for: <?php the_search_query(); ?></h2>
+					<h2>Search Results: <?php the_search_query(); ?></h2>
+				</div>
+			<?php }
+			if (is_archive()) { ?>
+				<div id="archives">
+					<h2>Archives:
+						<?php if (is_category() || is_tag())
+							single_term_title();
+						elseif (is_day())
+							echo get_the_date();
+						elseif (is_month())
+							echo get_the_date('F Y');
+						elseif (is_year())
+							echo get_the_date('Y');
+						elseif (is_author()) {
+							the_post();
+							the_author();
+							rewind_posts();
+						} ?>
+					</h2>
 				</div>
 			<?php }
 			while (have_posts()) {
 				the_post(); ?>
 				<div <?php post_class(); ?>>
 					<h2 class="entry_title">
-						<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 							<?php the_title(); ?>
 						</a>
 					</h2>
 					<?php if (!is_page()) { ?>
 					<p class="post_date">
-						<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-							<?php the_date(); ?> at <?php the_time() ?>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+							<?php the_date(); ?> at <?php the_time(); ?>
 						</a>
+						by <?php the_author_posts_link(); ?>
 					</p>
 					<?php }
 					the_content('Read More');

@@ -142,12 +142,8 @@ h1 a:hover, h2 a:hover, #menu a:hover,
 	hyphens: auto;
 }
 
-.type-post, .type-page, #search_query, #page_nav {
+.type-post, .type-page, #search_query, #archives, #page_nav {
 	padding: 0 1em 2em 1em;
-}
-
-#search_query {
-	font-weight: bold;
 }
 
 #content_outer p {
