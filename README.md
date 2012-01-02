@@ -10,6 +10,7 @@ It has the following features/goals:
 - Use advanced web standards where sensible (e.g. HTML5/CSS3)
 - Minimal adaptions to look good on mobile devices
 - Produce good printed output
+- 404 manatee
 
 Known issues:
 

@@ -141,10 +141,6 @@ a:link, a:visited {
 	hyphens: auto;
 }
 
-#pagenotfound {
-	text-transform: uppercase;
-}
-
 #searchquery {
 	font-weight: bold;
 }

@@ -2,12 +2,8 @@
 
 <div id="posts">
 	<div id="pagenotfound">
-		<h2 class="storytitle">404 Monkey</h2>
-		<p><img src="<?php bloginfo("template_directory"); ?>/images/404monkey.jpg" alt="404 MONKEY" /></p>
-		<p>Me look very hard! No find your page?</p>
-		<p>Where is the page?</p>
-		<p>You type wrong in address bar?</p>
-		<p>Try search instead, maybe find page?</p>
+		<h2 class="storytitle"><img src="<?php bloginfo("template_directory"); ?>/images/404.jpg" alt="404 Manatee" /></h2>
+		<p>I'm terribly sorry; I've not been able to find the page you were looking for. Would you mind searching instead? Thanks so much!</p>
 		<?php get_search_form(); ?>
 	</div>
 </div>
