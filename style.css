@@ -130,7 +130,7 @@ a:link, a:visited {
 	color: inherit;
 }
 
-.type-post, .type-page, #pagenotfound, #searchquery, #nextpage, #noposts, #sidebar, #comments {
+.type-post, .type-page, #searchquery, #nextpage, #noposts, #sidebar, #comments {
 	margin: 0 auto;
 	padding: 0 1em 3em 1em;
 	min-width: 27em;
@@ -402,7 +402,7 @@ blockquote:before {
 		float: none;
 	}
 
-	.type-post img, td img, .type-post embed, .type-post object {
+	td img, .type-post img, .type-page img, .type-post embed, .type-page embed, .type-post object, .type-page object {
 		max-width: 100%;
 		height: auto;
 	}
