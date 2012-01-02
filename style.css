@@ -43,11 +43,13 @@ h1 {
 }
 
 h1 a:link, h1 a:visited, h2 a:link, h2 a:visited,
-#menu a:link, .post_date a:link, .post_date a:visited {
+#menu a:link, .post_date a:link, .post_date a:visited,
+.comment-meta a:link, .comment-meta a:visited {
 	text-decoration: none;
 }
 
-h1 a:hover, h2 a:hover, #menu a:hover, .post_date a:hover {
+h1 a:hover, h2 a:hover, #menu a:hover,
+.post_date a:hover, .comment-meta a:hover {
 	text-decoration: underline;
 }
 
@@ -253,14 +255,18 @@ blockquote:before {
 
 .bypostauthor, .bypostauthor a:link, .bypostauthor a:visited {
 	background: #111;
-	color: #eee;
+	color: #eee !important;
 }
 
-#comments .avatar {
+.comment-author .avatar {
 	float: right;
 	clear: right;
 	margin: 0.5em 0 0.5em 0.5em;
 	border: solid #ccc 1px;
+}
+
+.comment-author cite {
+	font-style: normal;
 }
 
 #commentform label, #commentform .required {
