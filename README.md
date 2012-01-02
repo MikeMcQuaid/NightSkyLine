@@ -1,7 +1,7 @@
 NightSkyLine
 ============
 
-NightSkyLine is a readable HTML5 and CSS3 theme for Wordpress.
+NightSkyLine is a readable HTML5 and CSS3 theme for WordPress.
 
 It has the following features/goals:
 
