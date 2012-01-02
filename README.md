@@ -12,10 +12,6 @@ It has the following features/goals:
 - Produce good printed output
 - 404 manatee
 
-Known issues:
-
-- IE6 does not set the margin width correctly so occupies the full page.
-
 NightSkyLine is licensed under the [MIT License](http://en.wikipedia.org/wiki/MIT_License).
 The full license text is available in [LICENSE.txt](https://github.com/mikemcquaid/NightSkyLine/blob/master/LICENSE.txt).
 
