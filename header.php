@@ -18,11 +18,13 @@
 	wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<div id="title">
-		<h1><a href="<?php bloginfo("wpurl"); ?>"><?php bloginfo("name"); ?></a></h1>
-		<p id="description"><?php bloginfo("description"); ?></p>
-	</div>
+	<div id="header">
+		<div id="title">
+			<h1><a href="<?php bloginfo("wpurl"); ?>"><?php bloginfo("name"); ?></a></h1>
+			<p id="description"><?php bloginfo("description"); ?></p>
+		</div>
 
-	<div id="navbar">
-		<?php wp_nav_menu(array("menu"=>"Header", "container"=>"div", "depth"=>1)); ?>
+		<div id="navbar">
+			<?php wp_nav_menu(array("menu"=>"Header", "container"=>"div", "depth"=>1)); ?>
+		</div>
 	</div>

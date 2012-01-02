@@ -21,6 +21,10 @@ html, body {
 	color: black;
 }
 
+#header {
+	background-color: black;
+}
+
 #title {
 	text-shadow: 0 0 3px black;
 	font-weight: bold;

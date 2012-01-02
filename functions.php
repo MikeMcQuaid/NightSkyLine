@@ -16,7 +16,6 @@ function nightskyline_header_style() {
 		<style type="text/css">
 			#title {
 				min-height: <?php echo HEADER_IMAGE_HEIGHT; ?>px;
-				background-color: black;
 			}
 
 			<?php if (get_header_image()) { ?>
@@ -52,9 +51,10 @@ function nightskyline_admin_header_style() {
 				background-color: black;
 				min-height: <?php echo HEADER_IMAGE_HEIGHT; ?>px;
 				text-align: center;
-				text-shadow: 0 0 1px black;
+				text-shadow: 0 0 3px black;
 				font-family: Georgia, serif;
 				font-weight: bold;
+				overflow: hidden;
 			}
 
 			#name {
@@ -62,7 +62,7 @@ function nightskyline_admin_header_style() {
 			}
 
 			#desc {
-				font-size: 29px;
+				font-size: 28px;
 			}
 
 			#headimg h1 a:link	{
