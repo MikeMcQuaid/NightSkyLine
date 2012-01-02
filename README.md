@@ -12,6 +12,8 @@ It has the following features/goals:
 - Produce good printed output
 - 404 manatee
 
+The header image looks best if it is mirrored (as it repeats) and is black along the bottom edge (as it fades to the menu from black).
+
 NightSkyLine is licensed under the [MIT License](http://en.wikipedia.org/wiki/MIT_License).
 The full license text is available in [LICENSE.txt](https://github.com/mikemcquaid/NightSkyLine/blob/master/LICENSE.txt).
 
