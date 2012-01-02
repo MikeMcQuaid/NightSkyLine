@@ -17,8 +17,12 @@ html, body {
 	padding: 0;
 	margin: 0;
 	text-align: left;
-	background: #111;
-	color: black;
+	background-color: #111;
+	color: #eee;
+}
+
+a:link, a:visited {
+	color: #eee;
 }
 
 #header {
@@ -30,7 +34,7 @@ html, body {
 	font-weight: bold;
 }
 
-#title, #navbar, #footer {
+#title, #menu {
 	text-align: center;
 }
 
@@ -38,11 +42,12 @@ h1 {
 	font-size: 2.5em;
 }
 
-h1 a:link, h1 a:visited, h2 a:link, h2 a:visited, #navbar a:link, .postdate a:link, .postdate a:visited {
+h1 a:link, h1 a:visited, h2 a:link, h2 a:visited,
+#menu a:link, .post_date a:link, .post_date a:visited {
 	text-decoration: none;
 }
 
-h1 a:hover, h2 a:hover, #navbar a:hover, .postdate a:hover {
+h1 a:hover, h2 a:hover, #menu a:hover, .post_date a:hover {
 	text-decoration: underline;
 }
 
@@ -55,19 +60,11 @@ h1 a:hover, h2 a:hover, #navbar a:hover, .postdate a:hover {
 	font-size: 48px;
 }
 
-a:link, a:visited {
-	color: black;
-}
-
-#title a:link, #title a:visited, #navbar a:link, #navbar a:visited, #sidebar a:link, #sidebar a:visited {
-	color: #eee;
-}
-
 #description {
 	font-size: 28px;
 }
 
-#navbar {
+#menu {
 	border-bottom: solid black 1px;
 	background:
 		-moz-linear-gradient(
@@ -99,11 +96,10 @@ a:link, a:visited {
 			color-stop(0.7, #111),
 			color-stop(1.0, black)
 		);
-	color: #eee;
 	padding: 0.5em 0 0.25em 0;
 }
 
-#navbar a {
+#menu a {
 	font-weight: bold;
 	text-decoration: none;
 	font-size: 1.2em;
@@ -112,7 +108,7 @@ a:link, a:visited {
 	display: inline-block;
 }
 
-#navbar li, #navbar ul {
+#menu li, #menu ul {
 	display: inline;
 }
 
@@ -125,14 +121,17 @@ a:link, a:visited {
 	padding: 0;
 }
 
-#posts {
-	background: #fcfcfc;
-	color: inherit;
+#main {
+	background-color: #fcfcfc;
+	color: black;
 }
 
-.type-post, .type-page, #searchquery, #nextpage, #noposts, #sidebar, #comments {
+#main a:link, #main a:visited {
+	color: black;
+}
+
+#content, #sidebar {
 	margin: 0 auto;
-	padding: 0 1em 3em 1em;
 	min-width: 27em;
 	max-width: 37em;
 	overflow: hidden;
@@ -141,15 +140,19 @@ a:link, a:visited {
 	hyphens: auto;
 }
 
-#searchquery {
+.type-post, .type-page, #search_query, #page_nav {
+	padding: 0 1em 3em 1em;
+}
+
+#search_query {
 	font-weight: bold;
 }
 
-.type-post p, .type-page p, #noposts p, #comments p {
+#content_outer p {
 	text-align: justify;
 }
 
-.postcategory, .posttags, .postcomments, .more-link {
+.post_category, .post_tags, .comments_link, .more-link {
 	margin: 0;
 	font-weight: bold;
 }
@@ -162,7 +165,7 @@ h2 {
 	padding: 0.5em 0 0 0;
 }
 
-.postdate {
+.post_date {
 	font-style: normal;
 	font-variant: normal;
 	font-size: 1.2em;
@@ -184,7 +187,7 @@ h4 {
 	margin: 1.5em 0 -0.8em 0;
 }
 
-.type-post img, td img {
+#content img, td img {
 	padding: 4px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
@@ -195,7 +198,7 @@ h4 {
 	max-width: 100%;
 }
 
-.type-post .wp-smiley {
+#content .wp-smiley {
 	border: none;
 	display: inline;
 }
@@ -274,10 +277,12 @@ blockquote:before {
 	display: none;
 }
 
+#footer {
+	background-color: #111;
+}
+
 #sidebar {
 	border-top: solid black 1px;
-	background: inherit;
-	color: #eee;
 }
 
 #leftbar {
@@ -304,7 +309,7 @@ blockquote:before {
 	margin: 0.5em 0 0 0;
 }
 
-#sidebar li, #sidebar ul, #navbar li, #navbar ul {
+#sidebar li, #sidebar ul, #menu li, #menu ul {
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -321,15 +326,15 @@ blockquote:before {
 		margin: 0 12pt;
 		font-size: 12pt;
 	}
-	#title, #navbar, #sidebar, #footer, #nextpage,
-	.postcategory, .posttags, .postcomments, object, .more-link {
+	#header, #footer, #page_nav, .post_category, .post_tags,
+	.comments_link, object, .more-link {
 		display: none;
 	}
 	h1, h2, h3, h4 {
 		page-break-inside: avoid;
 		page-break-after: avoid;
 	}
-	#posts {
+	#content {
 		padding: 0;
 		margin: 0;
 		-webkit-box-shadow: none;
@@ -368,7 +373,7 @@ blockquote:before {
 		font-size: 16px;
 	}
 
-	#navbar a {
+	#menu a {
 		font-size: 0.9em;
 	}
 
@@ -389,11 +394,11 @@ blockquote:before {
 		font-size: 1.0em;
 	}
 
-	.postdate {
+	.post_date {
 		font-size: 1.1em;
 	}
 
-	.type-post, .type-page, #nextpage, #comments, #sidebar {
+	#content, #sidebar {
 		min-width: 10em;
 	}
 
@@ -402,7 +407,7 @@ blockquote:before {
 		float: none;
 	}
 
-	td img, .type-post img, .type-page img, .type-post embed, .type-page embed, .type-post object, .type-page object {
+	td img, #content img, #content embed, #content object {
 		max-width: 100%;
 		height: auto;
 	}
@@ -423,7 +428,7 @@ blockquote:before {
 		margin-right: 0;
 	}
 
-	#nextpage a {
+	#page_nav a {
 		padding-bottom: 0.5em;
 		display: inline-block;
 	}

@@ -27,7 +27,7 @@
 			<p id="description"><?php bloginfo("description"); ?></p>
 		</div>
 
-		<div id="navbar">
+		<div id="menu">
 			<?php wp_nav_menu(array("menu"=>"Header", "container"=>"div", "depth"=>1)); ?>
 		</div>
 	</div>
