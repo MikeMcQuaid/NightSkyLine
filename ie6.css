@@ -1,3 +1,3 @@
-.type-post, .type-page, #searchquery, #nextpage, #noposts, #sidebar, #comments {
+#content, #sidebar {
 	width: 32em;
 }
