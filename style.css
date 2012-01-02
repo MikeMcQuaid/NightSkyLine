@@ -141,7 +141,7 @@ h1 a:hover, h2 a:hover, #menu a:hover, .post_date a:hover {
 }
 
 .type-post, .type-page, #search_query, #page_nav {
-	padding: 0 1em 3em 1em;
+	padding: 0 1em 2em 1em;
 }
 
 #search_query {
