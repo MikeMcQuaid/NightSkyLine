@@ -2,14 +2,14 @@
 Theme Name: NightSkyLine
 Theme URI: https://github.com/mikemcquaid/NightSkyLine
 Description: A readable HTML5 and CSS3 theme.
-Version: 3.0
+Version: 1.0
 Author: Mike McQuaid
 Author URI: http://mikemcquaid.com/
 Copyright: Mike McQuaid
 Email: mike@mikemcquaid.com
 License: MIT License
 License URI: http://en.wikipedia.org/wiki/MIT_License
-Tags: black, white, custom-header, threaded-comments, sticky-post, custom-menu, bottom-sidebar, clean, dark, flexible-width, one-column, SEO friendly, widget-ready, widgets, html5, css3, readable
+Tags: black, white, dark, one-column, flexible-width, custom-header, custom-menu, microformats, sticky-post, threaded-comments
 */
 
 html, body {
@@ -323,6 +323,10 @@ blockquote:before {
 
 #clearbar {
 	clear: both;
+}
+
+.sticky, .gallery-caption {
+	/* Needed by Wordpress theme review but doesn't need to do anything! */
 }
 
 @media print {

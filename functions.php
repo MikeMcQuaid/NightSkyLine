@@ -1,4 +1,7 @@
 <?php
+if (!isset($content_width))
+	$content_width = 675;
+
 register_sidebar(array("name"=>"Footer Left", "description"=>"Left side of the footer"));
 register_sidebar(array("name"=>"Footer Right", "description"=>"Right side of the footer"));
 
