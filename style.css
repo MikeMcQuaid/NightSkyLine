@@ -330,9 +330,11 @@ blockquote:before {
 }
 
 @media print {
-	body {
-		background: white;
+	html, body {
+		background-color: white;
 		color: black;
+	}
+	body {
 		margin: 0 12pt;
 		font-size: 12pt;
 	}
