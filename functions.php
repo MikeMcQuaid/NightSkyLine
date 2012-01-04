@@ -2,6 +2,12 @@
 if (!isset($content_width))
 	$content_width = 675;
 
+function the_category_html5($output)
+{
+	return str_replace('rel="category tag"', 'rel="tag"', $output);
+}
+add_filter('the_category', 'the_category_html5');
+
 register_sidebar(array("name"=>"Footer Left", "description"=>"Left side of the footer"));
 register_sidebar(array("name"=>"Footer Right", "description"=>"Right side of the footer"));
 
