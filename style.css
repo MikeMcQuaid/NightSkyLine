@@ -133,18 +133,23 @@ h1 a:hover, h2 a:hover, #menu a:hover,
 	color: black;
 }
 
+#main, #footer {
+	padding: 0 1em;
+	min-width: 27em;
+	overflow: hidden;
+}
+
 #content, #sidebar {
 	margin: 0 auto;
-	min-width: 27em;
-	max-width: 37em;
-	overflow: hidden;
+	min-width: 25em;
+	max-width: 35em;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
 }
 
 .type-post, .type-page, #search_query, #archives, #page_nav {
-	padding: 0 1em 2em 1em;
+	padding-bottom: 2em;
 }
 
 #content_outer p {
