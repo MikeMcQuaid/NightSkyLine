@@ -406,6 +406,10 @@ blockquote:before {
 		font-size: 1.0em;
 	}
 
+	#main, #footer {
+		min-width: 12em;
+	}
+
 	.post_date {
 		font-size: 1.1em;
 	}
