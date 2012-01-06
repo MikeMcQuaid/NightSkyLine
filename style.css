@@ -214,6 +214,10 @@ table, th, td {
 	border: none;
 }
 
+.noborder {
+	border: none !important;
+}
+
 .aligncenter {
 	text-align: center;
 	margin-left: auto;
