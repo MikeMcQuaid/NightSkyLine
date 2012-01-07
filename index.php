@@ -9,14 +9,15 @@
 				</div>
 			<?php }
 			while (have_posts()) {
-				the_post(); ?>
+				the_post();
+				$is_page = (get_post_type() == 'page') ?>
 				<div <?php post_class(); ?>>
 					<h2 class="entry_title">
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 							<?php the_title(); ?>
 						</a>
 					</h2>
-					<?php if (get_post_type() != 'page') { ?>
+					<?php if (!$is_page) { ?>
 					<p class="post_date">
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 							<?php the_date(); ?> at <?php the_time(); ?>
@@ -26,10 +27,10 @@
 					<?php }
 					the_content('Read More');
 					wp_link_pages();
-					if (get_the_category()) { ?>
+					if (!$is_page && get_the_category()) { ?>
 						<p class="post_category">Posted in <?php the_category(', '); ?></p>
 					<?php }
-					if (get_the_tags()) { ?>
+					if (!$is_page && get_the_tags()) { ?>
 						<p class="post_tags"><?php the_tags(); ?></p>
 					<?php }
 					if(get_comments_number() > 0 || comments_open()) { ?>
