@@ -2,12 +2,28 @@
 <html <?php language_attributes();?>>
 <head>
 	<title>
-		<?php wp_title(" - ", true, "right");
-		bloginfo("name");
+		<?php
+		global $title;
+		if (is_archive())
+			$title .= "Archives: " . wp_title(" ", false, "right");
+		elseif (is_search())
+			$title .= "Search Results: " . get_search_query();
+		else
+			$title .= wp_title(" ", false, "right");
+
 		global $page, $paged;
 		$currentpage = max($paged, $page);
 		if ($currentpage >= 2)
-			echo " - Page " . $currentpage; ?>
+			$title .= "(Page $currentpage)";
+		echo $title;
+
+		if (is_home())
+			bloginfo("name");
+		echo ' - ';
+		if (is_home())
+			bloginfo("description");
+		else
+			bloginfo("name"); ?>
 	</title>
 	<meta charset="<?php bloginfo("charset"); ?>" />
 	<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no" />

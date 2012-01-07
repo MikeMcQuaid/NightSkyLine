@@ -148,7 +148,7 @@ h1 a:hover, h2 a:hover, #menu a:hover,
 	hyphens: auto;
 }
 
-.type-post, .type-page, #search_query, #archives, #page_nav {
+.type-post, .type-page, #posts_title, #page_nav {
 	padding-bottom: 2em;
 }
 

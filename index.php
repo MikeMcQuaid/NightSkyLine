@@ -3,28 +3,9 @@
 <div id="main">
 	<div id="content">
 		<?php if (have_posts()) {
-			if (is_search()) { ?>
-				<div id="search_query">
-					<h2>Search Results: <?php the_search_query(); ?></h2>
-				</div>
-			<?php }
-			if (is_archive()) { ?>
-				<div id="archives">
-					<h2>Archives:
-						<?php if (is_category() || is_tag())
-							single_term_title();
-						elseif (is_day())
-							echo get_the_date();
-						elseif (is_month())
-							echo get_the_date('F Y');
-						elseif (is_year())
-							echo get_the_date('Y');
-						elseif (is_author()) {
-							the_post();
-							the_author();
-							rewind_posts();
-						} ?>
-					</h2>
+			if (is_search() || is_archive()) { ?>
+				<div id="posts_title">
+					<h2><?php echo $title; ?></h2>
 				</div>
 			<?php }
 			while (have_posts()) {
