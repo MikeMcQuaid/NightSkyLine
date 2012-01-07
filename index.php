@@ -16,7 +16,7 @@
 							<?php the_title(); ?>
 						</a>
 					</h2>
-					<?php if (!is_page()) { ?>
+					<?php if (get_post_type() != 'page') { ?>
 					<p class="post_date">
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 							<?php the_date(); ?> at <?php the_time(); ?>
@@ -26,10 +26,10 @@
 					<?php }
 					the_content('Read More');
 					wp_link_pages();
-					if (!is_page() && get_the_category()) { ?>
+					if (get_the_category()) { ?>
 						<p class="post_category">Posted in <?php the_category(', '); ?></p>
 					<?php }
-					if (!is_page() && get_the_tags()) { ?>
+					if (get_the_tags()) { ?>
 						<p class="post_tags"><?php the_tags(); ?></p>
 					<?php }
 					if(get_comments_number() > 0 || comments_open()) { ?>
