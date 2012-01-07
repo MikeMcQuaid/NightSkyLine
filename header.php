@@ -11,14 +11,15 @@
 		else
 			$title .= wp_title(" ", false, "right");
 
+		if (is_home())
+			$title .= get_bloginfo("name");
+
 		global $page, $paged;
 		$currentpage = max($paged, $page);
 		if ($currentpage >= 2)
-			$title .= "(Page $currentpage)";
+			$title .= " (Page $currentpage)";
 		echo $title;
 
-		if (is_home())
-			bloginfo("name");
 		echo ' - ';
 		if (is_home())
 			bloginfo("description");
