@@ -23,7 +23,7 @@ html, body {
 }
 
 a:link, a:visited {
-	color: #eee;
+	color: inherit;
 }
 
 #header {
@@ -126,10 +126,6 @@ h1 a:hover, h2 a:hover, #menu a:hover,
 
 #main {
 	background-color: #fcfcfc;
-	color: black;
-}
-
-#main a:link, #main a:visited {
 	color: black;
 }
 
@@ -257,11 +253,14 @@ blockquote:before {
 	border-radius: 5px;
 	padding: 0.5em 1em;
 	margin: 1em 0;
+	background-color: #fcfcfc;
+	color: black;
 }
 
-.bypostauthor, .bypostauthor a:link, .bypostauthor a:visited {
+#comments_list > div.bypostauthor,
+#comments_list .parent > div.bypostauthor {
 	background: #111;
-	color: #eee !important;
+	color: #eee;
 }
 
 .comment-author .avatar {

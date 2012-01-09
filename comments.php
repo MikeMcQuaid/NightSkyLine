@@ -5,7 +5,7 @@
 	} ?>
 
 	<?php if (have_comments()) { ?>
-		<div>
+		<div id="comments_list">
 			<?php wp_list_comments(array("avatar_size"=>48,"style"=>"div")); ?>
 		</div>
 		<?php if (get_comment_pages_count() > 1 && get_option('page_comments')) { ?>
