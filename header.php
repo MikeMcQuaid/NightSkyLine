@@ -44,4 +44,13 @@
 		<div id="menu">
 			<?php wp_nav_menu(array("menu"=>"Header", "container"=>"div", "depth"=>1)); ?>
 		</div>
+
+	<!--[if lt IE 7]>
+		<div style='background: red; color: black; font-size: 1.5em; padding: 0.1em; text-align: center;'>
+			<p>This site will not appear correctly with your current version of Internet Explorer.</p>
+			<p><a href="http://www.ie6countdown.com">Microsoft is saying people shouldn't use it any more.</a></p>
+			<p><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">For a faster, safer browsing experience, upgrade for free today.</a></p>
+		</div>
+	<![endif]-->
+
 	</div>
