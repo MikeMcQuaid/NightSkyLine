@@ -242,7 +242,7 @@ blockquote:before {
 	font-size: 5em;
 	content: '\201C';
 	height: 0;
-	margin: 0.5em 0 -0.4em -0.5em;
+	margin: 0.5em 0 -0.3em -0.45em;
 }
 
 #comments {
