@@ -1,6 +1,6 @@
 <div id="footer">
 	<?php get_sidebar("footer"); ?>
-	<?php wp_footer(); ?>
 </div>
+<?php wp_footer(); ?>
 </body>
 </html>

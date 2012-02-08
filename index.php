@@ -25,8 +25,9 @@
 						by <?php the_author_posts_link(); ?>
 					</p>
 					<?php }
-					the_content('Read More');
-					wp_link_pages();
+					the_content('Read More'); ?>
+					<div class="clearboth"></div>
+					<?php wp_link_pages();
 					if (!$is_page && get_the_category()) { ?>
 						<p class="post_category">Posted in <?php the_category(', '); ?></p>
 					<?php }

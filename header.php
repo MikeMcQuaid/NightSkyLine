@@ -43,7 +43,7 @@
 		</div>
 
 		<div id="menu">
-			<?php wp_nav_menu(array("menu"=>"Header", "container"=>"div", "depth"=>1)); ?>
+			<?php wp_nav_menu(array("menu"=>"Header", "container"=>"div")); ?>
 		</div>
 
 	<!--[if lt IE 7]>

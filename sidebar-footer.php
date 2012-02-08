@@ -30,5 +30,5 @@
 			</ul>
 		</div>
 	</div>
-	<div id="clearbar"></div>
+	<div class="clearboth"></div>
 </div>

@@ -68,6 +68,10 @@ h1 a:hover, h2 a:hover, #menu a:hover,
 }
 
 #menu {
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 1.2em;
+	text-transform: lowercase;
 	border-bottom: solid black 1px;
 	background:
 		-moz-linear-gradient(
@@ -102,26 +106,31 @@ h1 a:hover, h2 a:hover, #menu a:hover,
 	padding: 0.5em 0 0.25em 0;
 }
 
-#menu a {
-	font-weight: bold;
-	text-decoration: none;
-	font-size: 1.2em;
-	margin: 0 0.5em;
-	text-transform: lowercase;
+#menu li {
 	display: inline-block;
+	position: relative;
 }
 
-#menu li, #menu ul {
-	display: inline;
+#menu a {
+	padding: 0 0.5em;
+	width: 100%;
 }
 
-.menu li {
-	display: inline;
+#menu li ul {
+	text-align: left;
+	display: none;
+	position: absolute;
+	z-index: 1;
+	background-color: #111;
+	box-shadow: 0 0.2em 0.2em 0.2em #111;
 }
 
-.menu, .page_item {
-	margin: 0;
-	padding: 0;
+#menu li ul a {
+	display: block;
+}
+
+#menu li:hover ul {
+	display: block;
 }
 
 #main {
@@ -147,6 +156,7 @@ h1 a:hover, h2 a:hover, #menu a:hover,
 
 .type-post, .type-page, #posts_title, #page_nav {
 	padding-bottom: 2em;
+	overflow: auto;
 }
 
 #content_outer p {
@@ -196,6 +206,7 @@ h4 {
 
 .type-post img {
 	display: block;
+	margin-bottom: 4px;
 }
 
 .wp-caption {
@@ -207,8 +218,38 @@ h4 {
 	display: inline;
 }
 
-table, th, td {
+table caption {
+	font-weight: bold;
+	font-size: 1.1em;
+	text-align: left;
+}
+
+table, thead, tr, td, th {
 	border: none;
+	border-collapse: collapse;
+}
+
+tbody td {
+	text-align: center;
+	padding: 0 0.2em;
+}
+
+th, tfoot {
+	font-weight: bold;
+	border: 1px black none;
+}
+
+#sidebar th, #sidebar tfoot {
+	border-color: #eee;
+}
+
+th {
+	text-align: center;
+	border-bottom-style: solid;
+}
+
+tfoot {
+	border-top-style: solid;
 }
 
 .noborder {
@@ -223,18 +264,20 @@ table, th, td {
 
 .alignleft {
 	text-align: left;
-	margin-left: 0;
-	margin-right: auto;
+	margin-right: 0.5em;
+	float: left;
 }
 
 .alignright {
 	text-align: right;
-	margin-left: auto;
-	margin-right: 0;
+	margin-left: 0.5em;
+	float: right;
 }
 
 .wp-caption-text {
 	margin-top: 0;
+	text-align: center;
+	margin: 0 4px;
 }
 
 blockquote:before {
@@ -325,14 +368,21 @@ blockquote:before {
 	margin: 0.5em 0 0 0;
 }
 
-#sidebar li, #sidebar ul, #menu li, #menu ul {
+#sidebar ul, #menu ul {
 	padding: 0;
 	margin: 0;
+}
+
+#sidebar li, #menu li {
 	list-style: none;
 }
 
-#clearbar {
+.clearboth {
 	clear: both;
+}
+
+.gallery-icon img {
+	margin: 0 auto;
 }
 
 .sticky, .gallery-caption {
