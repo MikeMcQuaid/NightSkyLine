@@ -8,10 +8,16 @@ function the_category_html5($output)
 }
 add_filter('the_category', 'the_category_html5');
 
-register_sidebar(array("name"=>"Footer Left", "description"=>"Left side of the footer"));
-register_sidebar(array("name"=>"Footer Right", "description"=>"Right side of the footer"));
+function nightskyline_sidebars() {
+	register_sidebar(array("name"=>"Footer Left", "description"=>"Left side of the footer"));
+	register_sidebar(array("name"=>"Footer Right", "description"=>"Right side of the footer"));
+}
+add_action('widgets_init', 'nightskyline_sidebars');
 
-register_nav_menu("Header", "Header menu");
+function nightskyline_menu() {
+	register_nav_menu("Header", "Header menu");
+}
+add_action('init', 'nightskyline_menu');
 
 add_theme_support("automatic-feed-links");
 
