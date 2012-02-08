@@ -1,7 +1,7 @@
 NightSkyLine
 ============
 
-NightSkyLine is a readable HTML5 and CSS3 theme for WordPress.
+NightSkyLine is a clean, readable theme for WordPress with mobile support.
 
 It has the following features/goals:
 
@@ -11,6 +11,7 @@ It has the following features/goals:
 - Minimal adaptions to look good on mobile devices
 - Produce good printed output
 - 404 manatee
+- Only try and support newer browsers (e.g. not Microsoft Internet Explorer 7 and lower)
 
 The header image looks best if it is mirrored (as it repeats) and is black along the bottom edge (as it fades to the menu from black).
 
