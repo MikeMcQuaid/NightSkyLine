@@ -141,7 +141,6 @@ h1 a:hover, h2 a:hover, #menu a:hover,
 #main, #footer {
 	padding: 0 1em;
 	min-width: 27em;
-	overflow: hidden;
 }
 
 #content, #sidebar {
@@ -151,12 +150,10 @@ h1 a:hover, h2 a:hover, #menu a:hover,
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
-	overflow: auto;
 }
 
 .type-post, .type-page, #posts_title, #page_nav {
 	padding-bottom: 2em;
-	overflow: auto;
 }
 
 #content_outer p {
@@ -186,6 +183,11 @@ h2 {
 img {
 	text-decoration: none;
 	border: none;
+}
+
+td img, #content img, #content embed, #content object {
+	max-width: 100%;
+	height: auto;
 }
 
 h3 {
@@ -299,7 +301,6 @@ blockquote:before {
 	margin: 1em 0;
 	background-color: #fcfcfc;
 	color: black;
-	overflow: auto;
 }
 
 #comments_list > div.bypostauthor,
@@ -442,7 +443,22 @@ blockquote:before {
 
 	#menu a {
 		font-size: 0.9em;
-		margin: 0 0.3em;
+		padding: 0 0.3em;
+	}
+
+	#menu li {
+		position: inherit;
+	}
+
+	#menu li ul {
+		display: inline;
+		position: inherit;
+		background-color: inherit;
+		box-shadow: 0 0;
+	}
+
+	#menu li ul a, #menu li:hover ul {
+		display: inline;
 	}
 
 	h1 {
@@ -477,11 +493,6 @@ blockquote:before {
 	#leftbar, #rightbar {
 		width: 100%;
 		float: none;
-	}
-
-	td img, #content img, #content embed, #content object {
-		max-width: 100%;
-		height: auto;
 	}
 
 	#commentform input {
