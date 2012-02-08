@@ -1,10 +1,8 @@
 <div id="comments">
 	<?php if (post_password_required()) { ?>
 		<p>Enter your password to view any comments.</p>
-		<?php return;
-	} ?>
-
-	<?php if (have_comments()) { ?>
+	<?php }
+	elseif (have_comments()) { ?>
 		<div id="comments_list">
 			<?php wp_list_comments(array("avatar_size"=>48,"style"=>"div")); ?>
 		</div>
@@ -13,7 +11,7 @@
 				<?php paginate_comments_links(); ?>
 			</div>
 		<?php }
-	} ?>
+	}
 
-	<?php comment_form(); ?>
+	comment_form(); ?>
 </div>
