@@ -20,7 +20,8 @@
 			$title .= " (Page $currentpage)";
 		echo $title;
 
-		echo ' - ';
+		if ($title)
+			echo ' - ';
 		if (is_home())
 			bloginfo("description");
 		else
