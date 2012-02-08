@@ -5,11 +5,11 @@
 		<?php
 		global $title;
 		if (is_archive())
-			$title .= "Archives: " . wp_title(" ", false, "right");
+			$title = "Archives: " . wp_title(" ", false, "right");
 		elseif (is_search())
-			$title .= "Search Results: " . get_search_query();
+			$title = "Search Results: " . get_search_query();
 		else
-			$title .= wp_title(" ", false, "right");
+			$title = wp_title(" ", false, "right");
 
 		if (is_home())
 			$title .= get_bloginfo("name");
