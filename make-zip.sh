@@ -5,3 +5,5 @@ TREEISH="$1"
 ZIP="$NAME-$TREEISH.zip"
 cd `dirname $0`
 git archive --verbose --format=zip --prefix=$NAME/ --output=$ZIP $TREEISH
+zip $ZIP --delete $NAME/*.scss
+zip $ZIP $NAME/*.css
