@@ -158,9 +158,13 @@ img {
   border: none;
 }
 
-td img, #content img, #content embed, #content object {
+td img, #content img {
   max-width: 100%;
   height: auto;
+}
+
+#content embed, #content object {
+  max-width: 100%;
 }
 
 h3 {
