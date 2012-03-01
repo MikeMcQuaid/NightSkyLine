@@ -219,6 +219,7 @@ h1, h2, #menu, .post_date, .comment-meta {
   margin: 0 auto;
   min-width: $text-min-width;
   max-width: $text-max-width;
+  overflow: auto;
   @include hyphens-auto;
 
   @media only screen and (max-device-width: 480px) {
@@ -421,6 +422,7 @@ blockquote {
   margin: 1em 0;
   background-color: $text-background-colour;
   color: $page-text-dark-colour;
+  overflow: auto;
 
   @media only screen and (max-device-width: 480px) {
     padding: 0.5em;
