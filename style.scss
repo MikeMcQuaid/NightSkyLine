@@ -11,27 +11,60 @@ License: MIT License
 License URI: http://en.wikipedia.org/wiki/MIT_License
 Tags: black, white, dark, one-column, flexible-width, custom-header, custom-menu, microformats, sticky-post, threaded-comments
 */
+$page-background-colour: #111;
+$page-background-dark-colour: black;
+$page-text-colour: #eee;
+$page-text-dark-colour: black;
+$text-background-colour: #fcfcfc;
+$text-min-width: 25em;
+$text-min-width-mobile: 10em;
+$text-max-width: 35em;
+$shadow-colour: black;
+$border-colour-light: #ccc;
+$border-colour-dark: black;
+
+@mixin border($colour) {
+  border: 1px solid $colour;
+}
+
 html, body {
   font: 1.1em Georgia, serif;
   line-height: 150%;
   padding: 0;
   margin: 0;
   text-align: left;
-  background-color: #111;
-  color: #eee;
+  background-color: $page-background-colour;
+  color: $page-text-colour;
+
+  @media print {
+    background-color: white;
+    color: black;
+  }
+
+  @media only screen and (max-device-width: 480px) {
+    font-size: 1.0em;
+    line-height: 125%;
+  }
 }
 
-a:link, a:visited {
-  color: inherit;
+a {
+  &:link, &:visited {
+    color: inherit;
+  }
+
+  @media print {
+    text-decoration: none;
+  }
 }
+
 
 #header {
   min-width: 29em;
-  background-color: black;
+  background-color: $page-background-dark-colour;
 }
 
 #title {
-  text-shadow: 0 0 3px black;
+  text-shadow: 0 0 3px $shadow-colour;
   font-weight: bold;
 }
 
@@ -41,17 +74,22 @@ a:link, a:visited {
 
 h1 {
   font-size: 2.5em;
+
+  @media only screen and (max-device-width: 480px) {
+    font-size: 1.6em;
+    padding-top: 0.25em;
+  }
 }
 
-h1 a:link, h1 a:visited, h2 a:link, h2 a:visited,
-#menu a:link, .post_date a:link, .post_date a:visited,
-.comment-meta a:link, .comment-meta a:visited {
-  text-decoration: none;
-}
-
-h1 a:hover, h2 a:hover, #menu a:hover,
-.post_date a:hover, .comment-meta a:hover {
-  text-decoration: underline;
+h1, h2, #menu, .post_date, .comment-meta {
+  a {
+    &:link, &:visited {
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 #title h1, #description {
@@ -61,69 +99,132 @@ h1 a:hover, h2 a:hover, #menu a:hover,
 
 #title h1 {
   font-size: 48px;
+
+  @media only screen and (max-device-width: 480px) {
+    padding-top: 5px;
+    font-size: 24px;
+  }
 }
 
 #description {
   font-size: 28px;
+
+  @media only screen and (max-device-width: 480px) {
+    font-size: 16px;
+  }
+}
+
+@mixin menu-gradient($start-decimal, $start-colour, $stop-decimal, $stop-colour, $prefix: "") {
+  background: #{$prefix}gradient(linear, left bottom, left top, color-stop($start-decimal, $start-colour), color-stop($stop-decimal, $stop-colour));
+}
+
+@mixin menu-gradients {
+  $start-decimal: 0.7;
+  $stop-decimal: 1;
+  $start-colour: $page-background-colour;
+  $stop-colour: $page-background-dark-colour;
+
+  @each $prefix in "-moz-", "-webkit-", "-khtml-", "" {
+    @if $prefix == "-moz-" {
+      $start-percent: $start-decimal*100%;
+      $stop-percent: $stop-decimal*100%;
+      background: -moz-linear-gradient(center bottom, $start-colour $start-percent, $stop-colour $stop-percent);
+    } @else {
+      background: #{$prefix}gradient(linear, left bottom, left top, color-stop($start-decimal, $start-colour), color-stop($stop-decimal, $stop-colour));
+    }
+  }
 }
 
 #menu {
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1.2em;
-  text-transform: lowercase;
-  border-bottom: solid black 1px;
-  background: -moz-linear-gradient(center bottom, #111111 70%, black 100%);
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0.7, #111111), color-stop(1, black));
-  background: -khtml-gradient(linear, left bottom, left top, color-stop(0.7, #111111), color-stop(1, black));
-  background: gradient(linear, left bottom, left top, color-stop(0.7, #111111), color-stop(1, black));
+  font: {
+    weight: bold;
+    size: 1.2em;
+  }
+  text: {
+    decoration: none;
+    transform: lowercase;
+  }
+  border-bottom: solid $border-colour-dark 1px;
+  @include menu-gradients;
   padding: 0.5em 0 0.25em 0;
-}
 
-#menu li {
-  display: inline-block;
-  position: relative;
-}
+  li {
+    display: inline-block;
+    position: relative;
 
-#menu a {
-  padding: 0 0.5em;
-  width: 100%;
-}
+    @media only screen and (max-device-width: 480px) {
+      position: inherit;
+    }
 
-#menu li ul {
-  text-align: left;
-  display: none;
-  position: absolute;
-  z-index: 1;
-  background-color: black;
-  box-shadow: 0 0.2em 0.2em 0.2em black;
-}
+    ul {
+      text-align: left;
+      display: none;
+      position: absolute;
+      z-index: 1;
+      background-color: $page-background-dark-colour;
+      box-shadow: 0 0.2em 0.2em 0.2em $page-background-dark-colour;
 
-#menu li ul a {
-  display: block;
-}
+      @media only screen and (max-device-width: 480px) {
+        display: inline;
+        position: inherit;
+        background-color: inherit;
+        box-shadow: 0 0;
+      }
+    }
 
-#menu li:hover ul {
-  display: block;
+
+    ul a, &:hover ul {
+      display: block;
+      @media only screen and (max-device-width: 480px) {
+        display: inline;
+      }
+    }
+  }
+
+  a {
+    padding: 0 0.5em;
+    width: 100%;
+
+    @media only screen and (max-device-width: 480px) {
+      font-size: 0.9em;
+      padding: 0 0.7em;
+
+    }
+  }
 }
 
 #main {
-  background-color: #fcfcfc;
-  color: black;
+  background-color: $text-background-colour;
+  color: $page-background-dark-colour;
 }
 
 #main, #footer {
   padding: 0 1em;
-  min-width: 27em;
+  min-width: $text-min-width + 2em;
+}
+
+@mixin hyphens-auto {
+  @each $prefix in "-moz-", "-webkit-", "" {
+    #{$prefix}hyphens: auto;
+  }
+}
+
+#header, #main, #footer {
+  @media only screen and (max-device-width: 480px) {
+    min-width: $text-min-width-mobile + 2em;
+  }
 }
 
 #content, #sidebar {
   margin: 0 auto;
-  min-width: 25em;
-  max-width: 35em;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
+  min-width: $text-min-width;
+  max-width: $text-max-width;
+  @include hyphens-auto;
+
+  @media only screen and (max-device-width: 480px) {
+    min-width: $text-min-width-mobile;
+  }
+
 }
 
 .type-post, .type-page, #posts_title, #page_nav {
@@ -140,18 +241,30 @@ h1 a:hover, h2 a:hover, #menu a:hover,
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 1.8em;
+  font: {
+    weight: bold;
+    size: 1.8em;
+  }
   line-height: 110%;
   margin: 0;
   padding: 0.5em 0 0 0;
+
+  @media only screen and (max-device-width: 480px) {
+    font-size: 1.4em;
+  }
 }
 
 .post_date {
-  font-style: normal;
-  font-variant: normal;
-  font-size: 1.2em;
+  font: {
+    style: normal;
+    variant: normal;
+    size: 1.2em;
+  }
   margin: 0.2em 0;
+
+  @media only screen and (max-device-width: 480px) {
+    font-size: 1.1em;
+  }
 }
 
 img {
@@ -159,29 +272,44 @@ img {
   border: none;
 }
 
-td img, #content img {
-  max-width: 100%;
-  height: auto;
+td #content {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
-#content embed, #content object {
-  max-width: 100%;
+#content {
+  embed, object {
+    max-width: 100%;
+  }
 }
 
 h3 {
   font-size: 1.4em;
   margin: 1.5em 0 -0.5em 0;
+
+  @media only screen and (max-device-width: 480px) {
+    font-size: 1.2em;
+  }
 }
 
 h4 {
   font-size: 1.2em;
   margin: 1.5em 0 -0.8em 0;
+
+  @media only screen and (max-device-width: 480px) {
+    font-size: 1.0em;
+  }
 }
 
-#content img, td img {
-  padding: 4px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+#content, td
+{
+  img {
+    padding: 4px;
+    @include border($border-colour-light);
+    border-radius: 5px;
+  }
 }
 
 .type-post img {
@@ -199,8 +327,10 @@ h4 {
 }
 
 table caption {
-  font-weight: bold;
-  font-size: 1.1em;
+  font: {
+    weight: bold;
+    size: 1.1em;
+  }
   text-align: left;
 }
 
@@ -216,11 +346,13 @@ tbody td {
 
 th, tfoot {
   font-weight: bold;
-  border: 1px black none;
+  border: 1px $border-colour-dark none;
 }
 
-#sidebar th, #sidebar tfoot {
-  border-color: #eee;
+#sidebar {
+  th, tfoot {
+    border-color: $page-text-colour;
+  }
 }
 
 th {
@@ -238,20 +370,24 @@ tfoot {
 
 .aligncenter {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+@mixin align($side) {
+  text-align: $side;
+  margin-#{$side}: 0.5em;
+  float: $side;
 }
 
 .alignleft {
-  text-align: left;
-  margin-right: 0.5em;
-  float: left;
+  @include align(left);
 }
 
 .alignright {
-  text-align: right;
-  margin-left: 0.5em;
-  float: right;
+  @include align(right);
 }
 
 .wp-caption-text {
@@ -260,12 +396,18 @@ tfoot {
   margin: 0 4px;
 }
 
-blockquote:before {
-  display: block;
-  font-size: 5em;
-  content: '\201C';
-  height: 0;
-  margin: 0.5em 0 -0.3em -0.45em;
+blockquote {
+  &:before {
+    display: block;
+    font-size: 5em;
+    content: '\201C';
+    height: 0;
+    margin: 0.5em 0 -0.3em -0.45em;
+  }
+
+  @media only screen and (max-device-width: 480px) {
+    margin-right: 0;
+  }
 }
 
 #comments {
@@ -273,33 +415,45 @@ blockquote:before {
 }
 
 .comment, .pingback, .trackback {
-  border: solid #ccc 1px;
+  @include border($border-colour-light);
   border-radius: 5px;
   padding: 0.5em 1em;
   margin: 1em 0;
-  background-color: #fcfcfc;
-  color: black;
+  background-color: $text-background-colour;
+  color: $page-text-dark-colour;
+
+  @media only screen and (max-device-width: 480px) {
+    padding: 0.5em;
+  }
 }
 
 #comments_list > div.bypostauthor,
 #comments_list .parent > div.bypostauthor {
-  background: #111;
-  color: #eee;
+  background: $page-background-colour;
+  color: $page-text-colour;
 }
 
-.comment-author .avatar {
-  float: right;
-  clear: right;
-  margin: 0.5em 0 0.5em 0.5em;
-  border: solid #ccc 1px;
+.comment-author {
+  .avatar {
+    float: right;
+    clear: right;
+    margin: 0.5em 0 0.5em 0.5em;
+    @include border($border-colour-light);
+  }
+
+  cite {
+    font-style: normal;
+  }
 }
 
-.comment-author cite {
-  font-style: normal;
-}
+#commentform {
+  label, .required {
+    font-weight: bold;
+  }
 
-#commentform label, #commentform .required {
-  font-weight: bold;
+  textarea {
+    width: 35em;
+  }
 }
 
 #author, #email, #url {
@@ -307,20 +461,16 @@ blockquote:before {
   float: left;
 }
 
-#commentform textarea {
-  width: 35em;
-}
-
 .comment-form-comment label, .widget_search label, .form-allowed-tags {
   display: none;
 }
 
 #footer {
-  background-color: #111;
+  background-color: $page-background-colour;
 }
 
 #sidebar {
-  border-top: solid black 1px;
+  border-top: solid $border-colour-dark 1px;
 }
 
 #leftbar {
@@ -347,13 +497,17 @@ blockquote:before {
   margin: 0.5em 0 0 0;
 }
 
-#sidebar ul, #menu ul {
-  padding: 0;
-  margin: 0;
+#sidebar, #menu {
+  ul {
+    padding: 0;
+    margin: 0;
+  }
 }
 
-#sidebar li, #menu li {
-  list-style: none;
+#sidebar, #menu {
+  li {
+    list-style: none;
+  }
 }
 
 .clearboth {
@@ -369,24 +523,29 @@ blockquote:before {
 }
 
 @media print {
-  html, body {
-    background-color: white;
-    color: black;
-  }
-
   body {
     margin: 0 12pt;
     font-size: 12pt;
   }
 
+  h1, h2, h3, h4 {
+    page: {
+      break-inside: avoid;
+      break-after: avoid;
+    }
+  }
+
+  p {
+    page-break-inside: avoid;
+  }
+
+  .pagebreak {
+    page-break-before: always;
+  }
+
   #header, #footer, #page_nav, .post_category, .post_tags,
   .comments_link, object, .more-link {
     display: none;
-  }
-
-  h1, h2, h3, h4 {
-    page-break-inside: avoid;
-    page-break-after: avoid;
   }
 
   #content {
@@ -396,102 +555,16 @@ blockquote:before {
     max-width: 100%;
     width: 100%;
   }
-
-  .pagebreak {
-    page-break-before: always;
-  }
-
-  p {
-    page-break-inside: avoid;
-  }
-
-  a {
-    text-decoration: none;
-  }
 }
+
 @media only screen and (max-device-width: 480px) {
-  html, body {
-    font-size: 1.0em;
-    line-height: 125%;
-  }
-
-  #title h1 {
-    padding-top: 5px;
-    font-size: 24px;
-  }
-
-  #description {
-    font-size: 16px;
-  }
-
-  #menu a {
-    font-size: 0.9em;
-    padding: 0 0.7em;
-  }
-
-  #menu li {
-    position: inherit;
-  }
-
-  #menu li ul {
-    display: inline;
-    position: inherit;
-    background-color: inherit;
-    box-shadow: 0 0;
-  }
-
-  #menu li ul a, #menu li:hover ul {
-    display: inline;
-  }
-
-  h1 {
-    font-size: 1.6em;
-    padding-top: 0.25em;
-  }
-
-  h2 {
-    font-size: 1.4em;
-  }
-
-  h3 {
-    font-size: 1.2em;
-  }
-
-  h4 {
-    font-size: 1.0em;
-  }
-
-  #header, #main, #footer {
-    min-width: 12em;
-  }
-
-  .post_date {
-    font-size: 1.1em;
-  }
-
-  #content, #sidebar {
-    min-width: 10em;
-  }
-
-  #leftbar, #rightbar {
+  #leftbar, #rightbar, #commentform textarea {
     width: 100%;
     float: none;
   }
 
   #commentform input {
     width: 15em;
-  }
-
-  #commentform textarea {
-    width: 100%;
-  }
-
-  .comment, .pingback, .trackback {
-    padding: 0.5em;
-  }
-
-  blockquote {
-    margin-right: 0;
   }
 
   #page_nav a {
