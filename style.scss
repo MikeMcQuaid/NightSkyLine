@@ -69,6 +69,7 @@ a {
 }
 
 #title, #menu {
+  // @extend?
   text-align: center;
 }
 
@@ -365,7 +366,7 @@ tfoot {
   border-top-style: solid;
 }
 
-.noborder {
+.noborder, .noborders img {
   border: none !important;
 }
 
@@ -392,7 +393,6 @@ tfoot {
 }
 
 .wp-caption-text {
-  margin-top: 0;
   text-align: center;
   margin: 0 4px;
 }
@@ -456,11 +456,11 @@ blockquote {
   textarea {
     width: 35em;
   }
-}
 
-#author, #email, #url {
-  margin-right: 2em;
-  float: left;
+  #author, #email, #url {
+    margin-right: 2em;
+    float: left;
+  }
 }
 
 .comment-form-comment label, .widget_search label, .form-allowed-tags {
