@@ -1,10 +1,7 @@
-NightSkyLine
-============
-
+# NightSkyLine
 NightSkyLine is a clean, readable theme for WordPress with mobile support.
 
-It has the following features/goals:
-
+## Features
 - Attractive design
 - Readable text and layout
 - Use advanced web standards where sensible (e.g. HTML5/CSS3)
@@ -13,11 +10,20 @@ It has the following features/goals:
 - 404 manatee
 - Only try and support newer browsers (e.g. not Microsoft Internet Explorer 7 and lower)
 
+## Installation
+Download from the [WordPress.org themes directory](http://wordpress.org/extend/themes/nightskyline) and install using [the instructions from the WordPress codex](https://codex.wordpress.org/Using_Themes#Adding_New_Themes).
+
+If you instead decide to download straight from GitHub be sure to run [`generate-css.sh`](https://github.com/mikemcquaid/NightSkyLine/blob/master/generate-css.sh) to generate the CSS `style.css` output from the SASS [`style.scss`](https://github.com/mikemcquaid/NightSkyLine/blob/master/style.scss) file.
+
+## Contact
+[Mike McQuaid](mailto:mike@mikemcquaid.com)
+
+## Caveats
 The header image looks best if it is mirrored (as it repeats) and is black along the bottom edge (as it fades to the menu from black).
 
+## License
 NightSkyLine is licensed under the [MIT License](http://en.wikipedia.org/wiki/MIT_License).
 The full license text is available in [LICENSE.txt](https://github.com/mikemcquaid/NightSkyLine/blob/master/LICENSE.txt).
 
-[My homepage](http://mikemcquaid.com) is always running the latest version and the default header image (usually) is a photo of the skyline of wherever I'm living at the time.
-
+## Preview
 ![NightSkyLine Preview](https://github.com/mikemcquaid/NightSkyLine/raw/master/screenshot.png)
