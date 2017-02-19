@@ -22,7 +22,7 @@ If you instead decide to download straight from GitHub be sure to run [`generate
 The header image looks best if it is mirrored (as it repeats) and is black along the bottom edge (as it fades to the menu from black).
 
 ## License
-NightSkyLine is licensed under the [MIT License](http://en.wikipedia.org/wiki/MIT_License).
+NightSkyLine is licensed under the the [AGPLv3 License](https://en.wikipedia.org/wiki/Affero_General_Public_License).
 The full license text is available in [LICENSE.txt](https://github.com/mikemcquaid/NightSkyLine/blob/master/LICENSE.txt).
 
 ## Preview
